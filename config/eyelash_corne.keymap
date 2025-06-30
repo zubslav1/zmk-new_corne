@@ -70,7 +70,7 @@
                               &kp LEFT_ALT  &mo 1  &kp KP_ENTER                                                &kp SPACE  &to 3  &kp BACKSPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         raise_layer {
