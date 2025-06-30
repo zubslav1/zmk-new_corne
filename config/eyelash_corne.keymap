@@ -70,7 +70,7 @@
                               &kp LEFT_ALT  &mo 1  &kp KP_ENTER                                                &kp SPACE  &to 3  &kp BACKSPACE
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         raise_layer {
@@ -81,8 +81,6 @@
 &trans  &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &mmv MOVE_DOWN                   &kp GRAVE      &kp COMMA  &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
                                       &trans            &trans           &kp SPACE                                                                 &kp RET        &trans     &kp BACKSPACE
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         numpad {
@@ -93,20 +91,16 @@
 &none   &none   &none   &none    &none    &none    &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
                         &trans   &to 0    &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
 
         sys {
             display-name = "sys";
             bindings = <
-&trans  &none            &none           &none         &none         &none                                          &mmv MOVE_UP                     &none            &none            &kp UP_ARROW     &none            &none     &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &to 0         &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &none            &none           &none            &none         &none                                          &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
+                                         &trans           &to 0         &trans                                                                          &kp INS          &kp DEL          &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
