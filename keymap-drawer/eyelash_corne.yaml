@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '[', s: '{'}
   - $$mdi:apple-keyboard-shift$$
   - A
   - S
@@ -44,59 +44,59 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
-  - SYMBOL
+  - '&rgb'
   - KP ENTER
   - $$mdi:keyboard-space$$
   - {t: sys, h: toggle}
   - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-esc$$
   - {t: '-', s: _}
   - <
   - '>'
   - '!'
   - '%'
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - END
   - '&'
   - ':'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - _
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
   - +
   - '"'
   - {t: '''', s: '"'}
   - {t: '=', s: +}
   - {t: ;, s: ':'}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-right-bold$$
   - '|'
   - {t: ., s: '>'}
   - (
   - )
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-control$$
   - ^
   - {t: /, s: '?'}
   - '*'
   - {t: \, s: '|'}
   - '#'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - HOME
   - {t: '`', s: '~'}
   - {t: ',', s: <}
   - '{'
   - '}'
   - '@'
   - '~'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - LEFT WIN
   - {t: '$$mdi:backspace$$', type: backspace}
   numpad:
   - F1
@@ -150,10 +150,10 @@ layers:
   sys:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - {t: BT DISC, h: '3'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
@@ -179,8 +179,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
   - RGB ON
-  - RGB EFF
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SAI
+  - RGB SAD
   - RGB EFF
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
