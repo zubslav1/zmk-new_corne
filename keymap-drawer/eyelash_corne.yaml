@@ -44,12 +44,61 @@ layers:
   - {t: /, h: '&shift FSLH', s: '?'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
-  - SYMBOL
-  - KP ENTER
+  - SYMBOL_en
+  - {t: LEFT WIN, h: '$$mdi:keyboard-return$$'}
   - $$mdi:keyboard-space$$
   - '&to_sys'
   - {t: '$$mdi:backspace$$', type: backspace}
-  SYMBOL:
+  qwerty_russian:
+  - $$mdi:keyboard-tab$$
+  - {t: Q, h: '&shift Q'}
+  - {t: W, h: '&shift W'}
+  - {t: E, h: '&shift E'}
+  - {t: R, h: '&shift R'}
+  - {t: T, h: '&shift T'}
+  - END
+  - {t: Y, h: '&shift Y'}
+  - {t: U, h: '&shift U'}
+  - {t: I, h: '&shift I'}
+  - {t: O, h: '&shift O'}
+  - {t: P, h: '&shift P'}
+  - {t: '[', h: '&shift LBKT', s: '{'}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: A, h: '&shift A'}
+  - {t: S, h: '&shift S'}
+  - {t: D, h: '&shift D'}
+  - {t: F, h: '&shift F'}
+  - {t: G, h: '&shift G'}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:arrow-right-bold$$
+  - {t: H, h: '&shift H'}
+  - {t: J, h: '&shift J'}
+  - {t: K, h: '&shift K'}
+  - {t: L, h: '&shift L'}
+  - {t: ;, h: '&shift SEMI', s: ':'}
+  - {t: ., h: '&shift APOS'}
+  - $$mdi:apple-keyboard-control$$
+  - {t: Z, h: '&shift Z'}
+  - {t: X, h: '&shift X'}
+  - {t: C, h: '&shift C'}
+  - {t: V, h: '&shift V'}
+  - {t: B, h: '&shift B'}
+  - $$mdi:keyboard-esc$$
+  - HOME
+  - {t: N, h: '&shift N'}
+  - {t: M, h: '&shift M'}
+  - {t: ',', h: '&shift COMMA', s: <}
+  - {t: ., h: '&shift DOT', s: '>'}
+  - {t: /, h: '&shift FSLH', s: '?'}
+  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:apple-keyboard-option$$
+  - symbol_rus
+  - {t: '$$mdi:keyboard-return$$', h: LEFT WIN}
+  - $$mdi:keyboard-space$$
+  - '&to_sys'
+  - {t: '$$mdi:backspace$$', type: backspace}
+  SYMBOL_en:
   - $$mdi:keyboard-esc$$
   - {t: '-', s: _}
   - <
@@ -76,7 +125,7 @@ layers:
   - {t: ., s: '>'}
   - (
   - )
-  - {t: /, s: '?'}
+  - '?'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - ^
@@ -96,6 +145,55 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - LEFT WIN
+  - {t: '$$mdi:backspace$$', type: backspace}
+  symbol_rus:
+  - $$mdi:keyboard-esc$$
+  - {t: '-', s: _}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '!'
+  - '%'
+  - END
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+6
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - _
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-shift$$
+  - +
+  - '@'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '=', s: +}
+  - $
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: /, s: '?'}
+  - (
+  - )
+  - '&'
+  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: \, s: '|'}
+  - '*'
+  - '|'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '?'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
   - LEFT WIN
   - {t: '$$mdi:backspace$$', type: backspace}
   numpad:
@@ -141,7 +239,7 @@ layers:
   - '3'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&to_qwerty_rus_layer'
   - '&to_qwerty_layer'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -190,7 +288,7 @@ layers:
   - RGB BRD
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&to_qwerty_rus_layer'
   - '&to_qwerty_layer'
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
@@ -199,3 +297,7 @@ layers:
 combos:
 - p: [43, 46]
   k: '&to_numpad'
+- p: [14, 12]
+  k: {t: ']', s: '}'}
+- p: [42, 13]
+  k: {t: qwerty_russian, h: toggle}
