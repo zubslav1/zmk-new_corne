@@ -66,6 +66,16 @@
             bindings = <&to_numpad>;
             key-positions = <43 46>;
         };
+
+        hard {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <14 12>;
+        };
+
+        toggle_russian {
+            bindings = <&tog 1>;
+            key-positions = <42 13>;
+        };
     };
 
     macros {
@@ -101,7 +111,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_TOG &to 3>,
+                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_TOG &to 5>,
                 <&macro_release>;
 
             label = "TO_SYS";
@@ -123,7 +133,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(215,90,49) &rgb_ug RGB_TOG &to 2>,
+                <&rgb_ug RGB_COLOR_HSB(215,90,49) &rgb_ug RGB_TOG &to 4>,
                 <&macro_release>;
 
             label = "TO_NUMPAD";
@@ -140,6 +150,17 @@
 
             label = "THRESHOLD";
         };
+
+        to_qwerty_rus_layer: to_qwerty_rus_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_TOG &to 0>,
+                <&macro_release>;
+
+            label = "TO_QWERTY_RUS_LAYER";
+        };
     };
 
     keymap {
@@ -148,42 +169,62 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                                  &kp LEFT_ALT     &mo 1            &kp KP_ENTER                                                   &kp SPACE        &to_sys          &kp BACKSPACE
+&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                             &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                   &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                                  &kp LEFT_ALT     &mo 2            &mt ENTER LEFT_WIN                                                &kp SPACE        &to_sys          &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        qwerty_russian {
+            bindings = <
+&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LBKT LEFT_BRACKET
+&kp LSHFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift APOS APOS
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &kp ESC              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                             &kp LEFT_ALT     &mo 3            &mt LEFT_WIN ENTER                                             &kp SPACE        &to_sys          &kp BACKSPACE
+            >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
+        };
+
+        symbol_eng {
+            display-name = "SYMBOL_en";
             bindings = <
 &kp ESC         &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &kp END               &kp AMPERSAND  &kp COLON     &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp BSPC
-&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp PIPE       &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH       &kp DEL
+&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp PIPE       &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp DEL
 &kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &kp HOME              &kp GRAVE      &kp COMMA     &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
                                               &kp LEFT_ALT      &none            &kp SPACE                                                      &kp RET        &kp LEFT_WIN  &kp BACKSPACE
+            >;
+        };
+
+        symbol_rus {
+            bindings = <
+&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp END               &none      &kp LS(NUMBER_6)  &none                 &none                  &kp UNDERSCORE  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp PLUS   &kp AT_SIGN    &none         &kp EQUAL        &kp DOLLAR             &kp LEFT  &mkp LCLK  &kp RIGHT  &none      &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp DEL
+&kp LCTRL       &none      &kp BACKSLASH  &kp ASTERISK  &kp PIPE         &none        &trans              &kp HOME              &none      &kp QUESTION      &none                 &none                  &none           &none
+                                          &kp LEFT_ALT  &none            &kp ENTER                                              &kp SPACE  &kp LEFT_WIN      &kp BACKSPACE
             >;
         };
 
         numpad {
             display-name = "numpad";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6                                 &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11           &kp F12                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
-&none   &none   &none   &none    &none             &none    &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
-                        &trans   &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
+&kp F1  &kp F2  &kp F3  &kp F4                &kp F5            &kp F6                                 &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
+&kp F7  &kp F8  &kp F9  &kp F10               &kp F11           &kp F12                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
+&none   &none   &none   &none                 &none             &none    &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
+                        &to_qwerty_rus_layer  &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
             >;
         };
 
         sys {
             display-name = "sys";
             bindings = <
-&trans  &rgb_ug RGB_TOG  &bt BT_DISC 0   &bt BT_DISC 1    &bt BT_DISC 2     &bt BT_DISC 3                                  &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD   &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
-                                         &trans           &to_qwerty_layer  &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &rgb_ug RGB_TOG  &bt BT_DISC 0   &bt BT_DISC 1         &bt BT_DISC 2     &bt BT_DISC 3                                  &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1          &bt BT_SEL 2      &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_SAI       &rgb_ug RGB_SAD   &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
+                                         &to_qwerty_rus_layer  &to_qwerty_layer  &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
