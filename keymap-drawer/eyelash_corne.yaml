@@ -44,10 +44,10 @@ layers:
   - {t: /, h: '&shift FSLH', s: '?'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
-  - '&rgb'
+  - '&mo_1_change_rgb'
   - KP ENTER
   - $$mdi:keyboard-space$$
-  - {t: sys, h: toggle}
+  - '&mo_1_change_rgb_test'
   - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL:
   - $$mdi:keyboard-esc$$
