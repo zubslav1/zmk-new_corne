@@ -71,11 +71,6 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <14 12>;
         };
-
-        toggle_russian {
-            bindings = <&tog 1>;
-            key-positions = <42 13>;
-        };
     };
 
     macros {
@@ -169,10 +164,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                             &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                   &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                                  &kp LEFT_ALT     &mo 2            &mt ENTER LEFT_WIN                                                &kp SPACE        &to_sys          &kp BACKSPACE
+&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                         &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G               &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &tog 1              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                                  &kp LEFT_ALT     &mo 2            &mt LEFT_WIN ENTER                                            &kp SPACE        &to_sys          &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -180,10 +175,10 @@
 
         qwerty_russian {
             bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LBKT LEFT_BRACKET
-&kp LSHFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift APOS APOS
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &kp ESC              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                             &kp LEFT_ALT     &mo 3            &mt LEFT_WIN ENTER                                             &kp SPACE        &to_sys          &kp BACKSPACE
+&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                         &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LBKT LEFT_BRACKET
+&kp LSHFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G               &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift APOS APOS
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &tog 1              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                             &kp LEFT_ALT     &mo 3            &mt LEFT_WIN ENTER                                            &kp SPACE        &to_sys          &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
