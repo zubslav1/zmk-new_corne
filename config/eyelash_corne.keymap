@@ -108,14 +108,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(98,85,48) &rgb_ug RGB_TOG>,
                 <&macro_press>,
-                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(98,85,48) &rgb_ug RGB_TOG &to 1>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_tap>,
-                <&rgb_ug RGB_TOG>;
+                <&rgb_ug RGB_TOG &to 0>;
 
             label = "RGB";
         };
