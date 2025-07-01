@@ -128,6 +128,18 @@
 
             label = "TO_NUMPAD";
         };
+
+        threshold: threshold {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_tap_time 250>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>;
+
+            label = "THRESHOLD";
+        };
     };
 
     keymap {
@@ -148,9 +160,9 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp ESC         &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &kp END               &kp AMPERSAND  &kp COLON     &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp BSPC
-&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp PIPE       &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH       &kp DEL
-&kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &kp HOME              &kp GRAVE      &kp COMMA     &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
+&kp ESC         &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &kp END               &kp AMPERSAND  &kp COLON     &kp LBKT                     &kp RIGHT_BRACKET             &kp UNDERSCORE  &kp BSPC
+&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp PIPE       &kp DOT       &threshold LEFT_PARENTHESIS  &threshold RIGHT_PARENTHESIS  &kp SLASH       &kp DEL
+&kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &kp HOME              &kp GRAVE      &kp COMMA     &kp LBRC                     &kp RBRC                      &kp AT_SIGN     &kp TILDE
                                               &kp LEFT_ALT      &none            &kp SPACE                                                      &kp RET        &kp LEFT_WIN  &kp BACKSPACE
             >;
         };
