@@ -2,7 +2,7 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
-  - Q
+  - {t: Q, h: '&shift Q'}
   - W
   - E
   - R
@@ -15,7 +15,7 @@ layers:
   - P
   - {t: '[', s: '{'}
   - $$mdi:apple-keyboard-shift$$
-  - A
+  - {t: A, h: '&shift A'}
   - S
   - D
   - F
@@ -30,7 +30,7 @@ layers:
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - Z
+  - {t: Sft+Z, h: '&shift Z'}
   - X
   - C
   - V
