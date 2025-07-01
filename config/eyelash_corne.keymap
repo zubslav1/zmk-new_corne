@@ -42,6 +42,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
+
+        mo_1: mo_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_1";
+            bindings = <&mo>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <10>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -62,7 +71,7 @@
         compatible = "zmk,combos";
 
         to_numpad {
-            bindings = <&to 2>;
+            bindings = <&to_numpad>;
             key-positions = <43 46>;
         };
     };
@@ -95,15 +104,15 @@
             label = "AS";
         };
 
-        mo_1_change_rgb: rgb {
+        mo_symbols: rgb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&mo 1>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(98,85,48) &rgb_ug RGB_TOG>,
-                <&macro_release>,
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_pause_for_release>,
                 <&mo 1>,
                 <&macro_tap>,
                 <&rgb_ug RGB_TOG>;
@@ -111,16 +120,37 @@
             label = "RGB";
         };
 
-        mo_1_change_rgb_test: new_macro {
+        to_sys: to_sys {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1 &rgb_ug RGB_COLOR_HSB(359,86,50) &rgb_ug RGB_TOG>,
-                <&macro_release>,
-                <&rgb_ug RGB_TOG &mo 1>;
+                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_TOG &to 3>,
+                <&macro_release>;
 
-            label = "NEW_MACRO";
+            label = "TO_SYS";
+        };
+
+        to_qwerty_layer: to_symbol_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_TOG &to 0>,
+                <&macro_release>;
+
+            label = "TO_SYMBOL_LAYER";
+        };
+
+        to_numpad: to_numpad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(215,90,49) &rgb_ug RGB_TOG &to 2>,
+                <&macro_release>;
+
+            label = "TO_NUMPAD";
         };
     };
 
@@ -130,10 +160,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R   &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U        &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F   &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J        &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V   &auto_shift B B  &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M        &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                                  &kp LEFT_ALT     &mo_1_change_rgb  &kp KP_ENTER                                                   &kp SPACE        &mo_1_change_rgb_test  &kp BACKSPACE
+&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                                  &kp LEFT_ALT     &mo_symbols      &kp KP_ENTER                                                   &kp SPACE        &to_sys          &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -152,20 +182,20 @@
         numpad {
             display-name = "numpad";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                                 &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
-&none   &none   &none   &none    &none    &none    &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
-                        &trans   &to 0    &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5            &kp F6                                 &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
+&kp F7  &kp F8  &kp F9  &kp F10  &kp F11           &kp F12                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
+&none   &none   &none   &none    &none             &none    &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
+                        &trans   &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
             >;
         };
 
         sys {
             display-name = "sys";
             bindings = <
-&trans  &rgb_ug RGB_TOG  &bt BT_DISC 0   &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3                                  &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
-                                         &trans           &to 0            &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &rgb_ug RGB_TOG  &bt BT_DISC 0   &bt BT_DISC 1    &bt BT_DISC 2     &bt BT_DISC 3                                  &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD   &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
+                                         &trans           &to_qwerty_layer  &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
