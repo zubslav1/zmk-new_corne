@@ -35,7 +35,7 @@ layers:
   - {t: C, h: '&shift C'}
   - {t: V, h: '&shift V'}
   - {t: B, h: '&shift B'}
-  - $$mdi:keyboard-esc$$
+  - {t: qwerty_russian, h: toggle}
   - HOME
   - {t: N, h: '&shift N'}
   - {t: M, h: '&shift M'}
@@ -45,7 +45,7 @@ layers:
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
   - SYMBOL_en
-  - {t: LEFT WIN, h: '$$mdi:keyboard-return$$'}
+  - {t: '$$mdi:keyboard-return$$', h: LEFT WIN}
   - $$mdi:keyboard-space$$
   - '&to_sys'
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -84,7 +84,7 @@ layers:
   - {t: C, h: '&shift C'}
   - {t: V, h: '&shift V'}
   - {t: B, h: '&shift B'}
-  - $$mdi:keyboard-esc$$
+  - {t: qwerty_russian, h: toggle}
   - HOME
   - {t: N, h: '&shift N'}
   - {t: M, h: '&shift M'}
@@ -299,5 +299,3 @@ combos:
   k: '&to_numpad'
 - p: [14, 12]
   k: {t: ']', s: '}'}
-- p: [42, 13]
-  k: {t: qwerty_russian, h: toggle}
