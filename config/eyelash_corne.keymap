@@ -40,7 +40,7 @@
             bindings = <&shift>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -95,16 +95,32 @@
             label = "AS";
         };
 
-        rgb: rgb {
+        mo_1_change_rgb: rgb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_ON &mo 1>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(98,85,48) &rgb_ug RGB_TOG>,
                 <&macro_release>,
-                <&rgb_ug RGB_OFF>;
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_TOG>;
 
             label = "RGB";
+        };
+
+        mo_1_change_rgb_test: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 1 &rgb_ug RGB_COLOR_HSB(359,86,50) &rgb_ug RGB_TOG>,
+                <&macro_release>,
+                <&rgb_ug RGB_TOG &mo 1>;
+
+            label = "NEW_MACRO";
         };
     };
 
@@ -114,10 +130,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                                  &kp LEFT_ALT     &rgb             &kp KP_ENTER                                                   &kp SPACE        &to 3            &kp BACKSPACE
+&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R   &auto_shift T T                          &kp END               &auto_shift Y Y  &auto_shift U U        &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F   &auto_shift G G                &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J        &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V   &auto_shift B B  &kp ESCAPE              &kp HOME              &auto_shift N N  &auto_shift M M        &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                                  &kp LEFT_ALT     &mo_1_change_rgb  &kp KP_ENTER                                                   &kp SPACE        &mo_1_change_rgb_test  &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
