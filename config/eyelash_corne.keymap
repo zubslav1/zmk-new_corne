@@ -4,6 +4,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -94,6 +95,14 @@
 
             label = "AS";
         };
+
+        rgb: rgb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&bl BL_TOG &mo 1>, <&macro_release>;
+
+            label = "RGB";
+        };
     };
 
     keymap {
@@ -102,10 +111,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R  &kp T                                 &kp END               &kp Y      &kp U  &kp I          &kp O    &kp P     &kp BSPC
+&kp TAB         &kp Q  &kp W  &kp E         &kp R  &kp T                                 &kp END               &kp Y      &kp U  &kp I          &kp O    &kp P     &kp LEFT_BRACKET
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F  &kp G                       &kp LEFT  &mkp LCLK  &kp RIGHT  &kp H      &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z  &kp X  &kp C         &kp V  &kp B         &kp ESCAPE              &kp HOME              &kp N      &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp CAPS
-                              &kp LEFT_ALT  &mo 1  &kp KP_ENTER                                                &kp SPACE  &to 3  &kp BACKSPACE
+                              &kp LEFT_ALT  &rgb   &kp KP_ENTER                                                &kp SPACE  &to 3  &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -114,10 +123,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &mmv MOVE_UP                     &kp AMPERSAND  &kp COLON  &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp BSPC
-&trans  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PIPE       &kp DOT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH       &kp DEL
-&trans  &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &mmv MOVE_DOWN                   &kp GRAVE      &kp COMMA  &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
-                                      &trans            &trans           &kp SPACE                                                                 &kp RET        &trans     &kp BACKSPACE
+&kp ESC         &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &kp END               &kp AMPERSAND  &kp COLON     &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp BSPC
+&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp PIPE       &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH       &kp DEL
+&kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &kp HOME              &kp GRAVE      &kp COMMA     &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
+                                              &kp LEFT_ALT      &none            &kp SPACE                                                      &kp RET        &kp LEFT_WIN  &kp BACKSPACE
             >;
         };
 
@@ -134,11 +143,13 @@
         sys {
             display-name = "sys";
             bindings = <
-&trans  &none            &none           &none            &none         &none                                          &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
-                                         &trans           &to 0         &trans                                                                          &kp INS          &kp DEL          &trans
+&trans  &none            &bt BT_DISC 0   &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3                                  &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &kp BSPC
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
+                                         &trans           &to 0            &trans                                                                          &kp INS          &kp DEL          &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
