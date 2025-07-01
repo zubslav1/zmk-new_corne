@@ -3,45 +3,45 @@ layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
   - {t: Q, h: '&shift Q'}
-  - W
-  - E
-  - R
-  - T
+  - {t: W, h: '&shift W'}
+  - {t: E, h: '&shift E'}
+  - {t: R, h: '&shift R'}
+  - {t: T, h: '&shift T'}
   - END
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '[', s: '{'}
+  - {t: Y, h: '&shift Y'}
+  - {t: U, h: '&shift U'}
+  - {t: I, h: '&shift I'}
+  - {t: O, h: '&shift O'}
+  - {t: P, h: '&shift P'}
+  - {t: '[', h: '&shift LEFT_BRACKET', s: '{'}
   - $$mdi:apple-keyboard-shift$$
   - {t: A, h: '&shift A'}
-  - S
-  - D
-  - F
-  - G
+  - {t: S, h: '&shift S'}
+  - {t: D, h: '&shift D'}
+  - {t: F, h: '&shift F'}
+  - {t: G, h: '&shift G'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
-  - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - {t: H, h: '&shift H'}
+  - {t: J, h: '&shift J'}
+  - {t: K, h: '&shift K'}
+  - {t: L, h: '&shift L'}
+  - {t: ;, h: '&shift SEMI', s: ':'}
+  - {t: '''', h: '&shift SQT', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - {t: Sft+Z, h: '&shift Z'}
-  - X
-  - C
-  - V
-  - B
+  - {t: Z, h: '&shift Z'}
+  - {t: X, h: '&shift X'}
+  - {t: C, h: '&shift C'}
+  - {t: V, h: '&shift V'}
+  - {t: B, h: '&shift B'}
   - $$mdi:keyboard-esc$$
   - HOME
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: N, h: '&shift N'}
+  - {t: M, h: '&shift M'}
+  - {t: ',', h: '&shift COMMA', s: <}
+  - {t: ., h: '&shift DOT', s: '>'}
+  - {t: /, h: '&shift FSLH', s: '?'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
   - '&rgb'
@@ -149,7 +149,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   sys:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB TOG
   - {t: BT DISC, h: '0'}
   - {t: BT DISC, h: '1'}
   - {t: BT DISC, h: '2'}
