@@ -136,7 +136,7 @@
                 <&macro_press>,
                 <&macro_tap_time 250>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_press>;
+                <&macro_release>;
 
             label = "THRESHOLD";
         };
