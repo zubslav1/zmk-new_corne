@@ -74,8 +74,8 @@ layers:
   - $$mdi:arrow-right-bold$$
   - '|'
   - {t: ., s: '>'}
-  - (
-  - )
+  - '&threshold LEFT_PARENTHESIS'
+  - '&threshold RIGHT_PARENTHESIS'
   - {t: /, s: '?'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
