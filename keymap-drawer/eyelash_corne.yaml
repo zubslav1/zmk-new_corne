@@ -44,10 +44,10 @@ layers:
   - {t: /, h: '&shift FSLH', s: '?'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-option$$
-  - '&mo_1_change_rgb'
+  - '&mo_symbols'
   - KP ENTER
   - $$mdi:keyboard-space$$
-  - '&mo_1_change_rgb_test'
+  - '&to_sys'
   - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL:
   - $$mdi:keyboard-esc$$
@@ -142,7 +142,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
+  - '&to_qwerty_layer'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '0'
@@ -191,11 +191,11 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
+  - '&to_qwerty_layer'
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [43, 46]
-  k: {t: numpad, h: toggle}
+  k: '&to_numpad'
