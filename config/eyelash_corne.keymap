@@ -113,7 +113,7 @@
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_pause_for_release>,
-                <&mo 1>,
+                <&macro_release>,
                 <&macro_tap>,
                 <&rgb_ug RGB_TOG>;
 
