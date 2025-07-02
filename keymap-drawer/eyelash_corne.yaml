@@ -56,7 +56,7 @@ layers:
   - '>'
   - '!'
   - '%'
-  - END
+  - $$mdi:arrow-up-bold$$
   - '&'
   - ':'
   - {t: '[', s: '{'}
@@ -85,7 +85,7 @@ layers:
   - {t: \, s: '|'}
   - '#'
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
+  - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
   - {t: ',', s: <}
   - '{'
@@ -105,7 +105,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '!'
   - '%'
-  - END
+  - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+6
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -134,7 +134,7 @@ layers:
   - '|'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
+  - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '?'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
