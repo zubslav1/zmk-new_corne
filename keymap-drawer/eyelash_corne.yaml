@@ -35,7 +35,7 @@ layers:
   - {t: C, h: '&shift C'}
   - {t: V, h: '&shift V'}
   - {t: B, h: '&shift B'}
-  - {t: qwerty_russian, h: toggle}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - {t: N, h: '&shift N'}
   - {t: M, h: '&shift M'}
@@ -47,56 +47,7 @@ layers:
   - SYMBOL_en
   - {t: '$$mdi:keyboard-return$$', h: LEFT WIN}
   - $$mdi:keyboard-space$$
-  - '&to_sys'
-  - {t: '$$mdi:backspace$$', type: backspace}
-  qwerty_russian:
-  - $$mdi:keyboard-tab$$
-  - {t: Q, h: '&shift Q'}
-  - {t: W, h: '&shift W'}
-  - {t: E, h: '&shift E'}
-  - {t: R, h: '&shift R'}
-  - {t: T, h: '&shift T'}
-  - END
-  - {t: Y, h: '&shift Y'}
-  - {t: U, h: '&shift U'}
-  - {t: I, h: '&shift I'}
-  - {t: O, h: '&shift O'}
-  - {t: P, h: '&shift P'}
-  - {t: '[', h: '&shift LBKT', s: '{'}
-  - $$mdi:apple-keyboard-shift$$
-  - {t: A, h: '&shift A'}
-  - {t: S, h: '&shift S'}
-  - {t: D, h: '&shift D'}
-  - {t: F, h: '&shift F'}
-  - {t: G, h: '&shift G'}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:arrow-right-bold$$
-  - {t: H, h: '&shift H'}
-  - {t: J, h: '&shift J'}
-  - {t: K, h: '&shift K'}
-  - {t: L, h: '&shift L'}
-  - {t: ;, h: '&shift SEMI', s: ':'}
-  - {t: ., h: '&shift APOS'}
-  - $$mdi:apple-keyboard-control$$
-  - {t: Z, h: '&shift Z'}
-  - {t: X, h: '&shift X'}
-  - {t: C, h: '&shift C'}
-  - {t: V, h: '&shift V'}
-  - {t: B, h: '&shift B'}
-  - {t: qwerty_russian, h: toggle}
-  - HOME
-  - {t: N, h: '&shift N'}
-  - {t: M, h: '&shift M'}
-  - {t: ',', h: '&shift COMMA', s: <}
-  - {t: ., h: '&shift DOT', s: '>'}
-  - {t: /, h: '&shift FSLH', s: '?'}
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:apple-keyboard-option$$
-  - symbol_rus
-  - {t: '$$mdi:keyboard-return$$', h: LEFT WIN}
-  - $$mdi:keyboard-space$$
-  - '&to_sys'
+  - {t: '&to_sys', h: symbol_rus}
   - {t: '$$mdi:backspace$$', type: backspace}
   SYMBOL_en:
   - $$mdi:keyboard-esc$$
@@ -160,7 +111,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - _
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: ']', s: '}'}
   - $$mdi:apple-keyboard-shift$$
   - +
   - '@'
@@ -191,10 +142,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - LEFT WIN
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
-  - LEFT WIN
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:backspace$$', type: backspace}
   numpad:
   - F1
