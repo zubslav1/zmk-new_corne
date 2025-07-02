@@ -50,7 +50,7 @@
             bindings = <&mo>, <&to_sys>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
         };
     };
@@ -163,19 +163,19 @@
         symbol_eng {
             display-name = "SYMBOL_en";
             bindings = <
-&kp ESC         &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &kp END               &kp AMPERSAND  &kp COLON     &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp BSPC
-&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp PIPE       &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp DEL
-&kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &kp HOME              &kp GRAVE      &kp COMMA     &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
-                                              &kp LEFT_ALT      &none            &kp SPACE                                                      &kp RET        &kp LEFT_WIN  &kp BACKSPACE
+&kp ESC         &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PRCNT                                &kp UP_ARROW               &kp AMPERSAND  &kp COLON     &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp BSPC
+&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &kp PIPE       &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp DEL
+&kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp POUND      &trans                    &kp DOWN_ARROW             &kp GRAVE      &kp COMMA     &kp LBRC              &kp RBRC               &kp AT_SIGN     &kp TILDE
+                                              &kp LEFT_ALT      &none            &kp SPACE                                                           &kp RET        &kp LEFT_WIN  &kp BACKSPACE
             >;
         };
 
         symbol_rus {
             bindings = <
-&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp END               &none      &kp LS(NUMBER_6)  &none                 &none                  &kp UNDERSCORE  &kp RIGHT_BRACKET
-&kp LEFT_SHIFT  &kp PLUS   &kp AT_SIGN    &none         &kp EQUAL        &kp DOLLAR             &kp LEFT  &mkp LCLK  &kp RIGHT  &none      &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp DEL
-&kp LCTRL       &none      &kp BACKSLASH  &kp ASTERISK  &kp PIPE         &none        &trans              &kp HOME              &none      &kp QUESTION      &none                 &none                  &none           &none
-                                          &kp LEFT_ALT  &kp LEFT_WIN     &kp ENTER                                              &kp SPACE  &none             &kp BACKSPACE
+&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp UP_ARROW               &none      &kp LS(NUMBER_6)  &none                 &none                  &kp UNDERSCORE  &kp RIGHT_BRACKET
+&kp LEFT_SHIFT  &kp PLUS   &kp AT_SIGN    &none         &kp EQUAL        &kp DOLLAR             &kp LEFT  &mkp LCLK       &kp RIGHT  &none      &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp DEL
+&kp LCTRL       &none      &kp BACKSLASH  &kp ASTERISK  &kp PIPE         &none        &trans              &kp DOWN_ARROW             &none      &kp QUESTION      &none                 &none                  &none           &none
+                                          &kp LEFT_ALT  &kp LEFT_WIN     &kp ENTER                                                   &kp SPACE  &none             &kp BACKSPACE
             >;
         };
 
