@@ -35,7 +35,7 @@ layers:
   - {t: C, h: '&shift C'}
   - {t: V, h: '&shift V'}
   - {t: B, h: '&shift B'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-esc$$
   - HOME
   - {t: N, h: '&shift N'}
   - {t: M, h: '&shift M'}
