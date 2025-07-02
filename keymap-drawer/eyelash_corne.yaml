@@ -14,7 +14,7 @@ layers:
   - {t: O, h: '&shift O'}
   - {t: P, h: '&shift P'}
   - {t: '[', h: '&shift LEFT_BRACKET', s: '{'}
-  - $$mdi:apple-keyboard-shift$$
+  - '&td0'
   - {t: A, h: '&shift A'}
   - {t: S, h: '&shift S'}
   - {t: D, h: '&shift D'}
@@ -35,14 +35,14 @@ layers:
   - {t: C, h: '&shift C'}
   - {t: V, h: '&shift V'}
   - {t: B, h: '&shift B'}
-  - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-caps$$
   - HOME
   - {t: N, h: '&shift N'}
   - {t: M, h: '&shift M'}
   - {t: ',', h: '&shift COMMA', s: <}
   - {t: ., h: '&shift DOT', s: '>'}
   - {t: /, h: '&shift FSLH', s: '?'}
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-option$$
   - SYMBOL_en
   - {t: '$$mdi:keyboard-return$$', h: LEFT WIN}
