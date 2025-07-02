@@ -147,7 +147,7 @@
         ctrl_c: ctrl_c {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL &kp C>, <&macro_release>;
+            bindings = <&macro_tap>, <&kp LCTRL &kp C>;
 
             label = "CTRL_C";
         };
@@ -155,7 +155,13 @@
         ctrl_v: ctrl_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL &kp V>, <&macro_release>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCTRL>;
 
             label = "CTRL_V";
         };
