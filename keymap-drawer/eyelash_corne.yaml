@@ -226,10 +226,10 @@ layers:
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB EFF
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
+  - '&ctrl_z'
+  - '&ctrl_x'
+  - '&ctrl_c'
+  - '&ctrl_v'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
