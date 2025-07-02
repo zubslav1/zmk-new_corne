@@ -43,6 +43,16 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        mo_rus_or_to_sys: mo_rus_or_to_sys {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_RUS_OR_TO_SYS";
+            bindings = <&mo>, <&to_sys>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -106,7 +116,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_TOG &to 5>,
+                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_ON &to 4>,
                 <&macro_release>;
 
             label = "TO_SYS";
@@ -128,33 +138,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(215,90,49) &rgb_ug RGB_TOG &to 4>,
+                <&rgb_ug RGB_COLOR_HSB(215,90,49) &rgb_ug RGB_ON &to 3>,
                 <&macro_release>;
 
             label = "TO_NUMPAD";
-        };
-
-        threshold: threshold {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_tap_time 250>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>;
-
-            label = "THRESHOLD";
-        };
-
-        to_qwerty_rus_layer: to_qwerty_rus_layer {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&rgb_ug RGB_TOG &to 0>,
-                <&macro_release>;
-
-            label = "TO_QWERTY_RUS_LAYER";
         };
     };
 
@@ -164,24 +151,13 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                         &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G               &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &tog 1              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                                  &kp LEFT_ALT     &mo 2            &mt LEFT_WIN ENTER                                            &kp SPACE        &to_sys          &kp BACKSPACE
+&kp TAB         &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                        &kp END               &auto_shift Y Y  &auto_shift U U        &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&kp LEFT_SHIFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G              &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J        &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL       &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &none              &kp HOME              &auto_shift N N  &auto_shift M M        &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
+                                                  &kp LEFT_ALT     &mo 1            &mt LEFT_WIN ENTER                                           &kp SPACE        &mo_rus_or_to_sys 2 0  &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
-        };
-
-        qwerty_russian {
-            bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                         &kp END               &auto_shift Y Y  &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LBKT LEFT_BRACKET
-&kp LSHFT  &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G               &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift APOS APOS
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &tog 1              &kp HOME              &auto_shift N N  &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp CAPS
-                                             &kp LEFT_ALT     &mo 3            &mt LEFT_WIN ENTER                                            &kp SPACE        &to_sys          &kp BACKSPACE
-            >;
-
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PG_UP>;
         };
 
         symbol_eng {
@@ -196,10 +172,10 @@
 
         symbol_rus {
             bindings = <
-&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp END               &none      &kp LS(NUMBER_6)  &none                 &none                  &kp UNDERSCORE  &kp BACKSPACE
+&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp END               &none      &kp LS(NUMBER_6)  &none                 &none                  &kp UNDERSCORE  &kp RIGHT_BRACKET
 &kp LEFT_SHIFT  &kp PLUS   &kp AT_SIGN    &none         &kp EQUAL        &kp DOLLAR             &kp LEFT  &mkp LCLK  &kp RIGHT  &none      &kp SLASH         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp DEL
 &kp LCTRL       &none      &kp BACKSLASH  &kp ASTERISK  &kp PIPE         &none        &trans              &kp HOME              &none      &kp QUESTION      &none                 &none                  &none           &none
-                                          &kp LEFT_ALT  &none            &kp ENTER                                              &kp SPACE  &kp LEFT_WIN      &kp BACKSPACE
+                                          &kp LEFT_ALT  &kp LEFT_WIN     &kp ENTER                                              &kp SPACE  &none             &kp BACKSPACE
             >;
         };
 
