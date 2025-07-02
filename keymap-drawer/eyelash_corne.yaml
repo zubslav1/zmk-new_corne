@@ -197,7 +197,7 @@ layers:
   - '0'
   - {t: '$$mdi:backspace$$', type: backspace}
   sys:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB ON
   - RGB TOG
   - {t: BT DISC, h: '0'}
   - {t: BT DISC, h: '1'}
@@ -209,8 +209,8 @@ layers:
   - $$mdi:arrow-up-bold$$
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB OFF
   - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
@@ -225,12 +225,12 @@ layers:
   - $$mdi:arrow-right-bold$$
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - RGB OFF
-  - RGB ON
-  - RGB SAI
-  - RGB SAD
   - RGB EFF
+  - UNDO
+  - CUT
+  - COPY
+  - PASTE
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - RGB HUI
@@ -241,10 +241,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&to_qwerty_layer'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-left-click-outline$$
   - INS
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
 combos:
 - p: [43, 46]
   k: '&to_numpad'
