@@ -226,7 +226,7 @@ layers:
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB EFF
-  - '&ctrl_z'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&ctrl_x'
   - '&ctrl_c'
   - '&ctrl_v'
