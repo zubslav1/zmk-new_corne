@@ -185,6 +185,34 @@
 
             label = "CTRL_X";
         };
+
+        left_end_word: left_end_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "LEFT_END_WORD";
+        };
+
+        start_of_word: start_of_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "START_OF_WORD";
+        };
     };
 
     keymap {
@@ -193,10 +221,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                           &kp END               &auto_shift Y Y  &auto_shift U U        &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                 &kp LEFT  &mkp LCLK  &kp RIGHT  &auto_shift H H  &auto_shift J J        &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &kp CAPS              &kp HOME              &auto_shift N N  &auto_shift M M        &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
-                                             &kp LEFT_ALT     &mo 1            &mt LEFT_WIN ENTER                                              &kp SPACE        &mo_rus_or_to_sys 2 0  &kp BACKSPACE
+&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                                 &kp END                    &auto_shift Y Y  &auto_shift U U        &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G                 &left_end_word  &mkp LCLK  &start_of_word  &auto_shift H H  &auto_shift J J        &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &kp CAPS                    &kp HOME                   &auto_shift N N  &auto_shift M M        &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
+                                             &kp LEFT_ALT     &mo 1            &mt LEFT_WIN ENTER                                                         &kp SPACE        &mo_rus_or_to_sys 2 0  &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -236,7 +264,7 @@
             bindings = <
 &rgb_ug RGB_ON   &rgb_ug RGB_TOG  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2     &bt BT_DISC 3                                &mmv MOVE_UP                     &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &none
 &rgb_ug RGB_OFF  &bt BT_CLR_ALL   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2      &bt BT_SEL 3                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
-&rgb_ug RGB_EFF  &none            &ctrl_x        &ctrl_c        &ctrl_v           &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
+&kp LCTRL        &none            &ctrl_x        &ctrl_c        &ctrl_v           &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
                                                  &none          &to_qwerty_layer  &mkp LCLK                                                                     &kp INS          &kp DEL          &kp BACKSPACE
             >;
 
