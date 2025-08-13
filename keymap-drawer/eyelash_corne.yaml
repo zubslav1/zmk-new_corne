@@ -20,9 +20,9 @@ layers:
   - {t: D, h: '&shift D'}
   - {t: F, h: '&shift F'}
   - {t: G, h: '&shift G'}
-  - $$mdi:arrow-left-bold$$
+  - '&left_end_word'
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:arrow-right-bold$$
+  - '&start_of_word'
   - {t: H, h: '&shift H'}
   - {t: J, h: '&shift J'}
   - {t: K, h: '&shift K'}
@@ -225,7 +225,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB EFF
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&ctrl_x'
   - '&ctrl_c'
