@@ -84,9 +84,14 @@
             key-positions = <43 46>;
         };
 
-        hard {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <14 12>;
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <17 16>;
         };
     };
 
