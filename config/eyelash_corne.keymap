@@ -228,7 +228,7 @@
                 <&macro_press>,
                 <&kp LCTRL &kp LEFT_SHIFT>,
                 <&macro_tap>,
-                <&kp C>,
+                <&kp Z>,
                 <&macro_release>,
                 <&kp LCTRL &kp LEFT_SHIFT>;
 
