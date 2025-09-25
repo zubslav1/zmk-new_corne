@@ -248,5 +248,7 @@ layers:
 combos:
 - p: [43, 46]
   k: '&to_numpad'
-- p: [14, 12]
-  k: {t: ']', s: '}'}
+- p: [1, 2]
+  k: $$mdi:keyboard-esc$$
+- p: [17, 16]
+  k: $$mdi:keyboard-tab$$
