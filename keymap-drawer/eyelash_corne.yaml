@@ -52,19 +52,19 @@ layers:
   SYMBOL_en:
   - $$mdi:keyboard-esc$$
   - {t: '-', s: _}
-  - <
-  - '>'
-  - '!'
-  - '%'
+  - '&shift LESS_THAN'
+  - '&shift GREATER_THAN'
+  - '&shift EXCLAMATION'
+  - '&shift PRCNT'
   - $$mdi:arrow-up-bold$$
-  - '&'
+  - '&shift AMPERSAND'
   - ':'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - _
+  - '&shift UNDERSCORE'
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-shift$$
-  - +
+  - '&shift PLUS'
   - '"'
   - {t: '''', s: '"'}
   - {t: '=', s: +}
@@ -72,26 +72,26 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
-  - '|'
+  - '&shift PIPE'
   - {t: ., s: '>'}
-  - (
-  - )
-  - '?'
+  - '&shift LEFT_PARENTHESIS'
+  - '&shift RIGHT_PARENTHESIS'
+  - '&shift QUESTION'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - ^
+  - '&shift CARET'
   - {t: /, s: '?'}
-  - '*'
+  - '&shift ASTERISK'
   - {t: \, s: '|'}
-  - '#'
+  - '&shift POUND'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
   - {t: ',', s: <}
-  - '{'
-  - '}'
-  - '@'
-  - '~'
+  - '&shift LBRC'
+  - '&shift RBRC'
+  - '&shift AT_SIGN'
+  - '&shift TILDE'
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - $$mdi:keyboard-space$$
@@ -103,21 +103,21 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '!'
-  - '%'
+  - '&shift EXCLAMATION'
+  - '&shift PERCENT'
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+6
+  - '&shift LS(NUMBER_6)'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - _
-  - {t: ']', s: '}'}
+  - '&shift UNDERSCORE'
+  - {t: ']', h: '&shift RIGHT_BRACKET', s: '}'}
   - $$mdi:apple-keyboard-shift$$
   - +
-  - '@'
+  - '&shift AT_SIGN'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
-  - $
+  - '&shift DOLLAR'
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
@@ -125,18 +125,18 @@ layers:
   - {t: /, s: '?'}
   - (
   - )
-  - '&'
+  - '&shift AMPERSAND'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: \, s: '|'}
-  - '*'
-  - '|'
+  - '&shift BACKSLASH'
+  - '&shift ASTERISK'
+  - '&shift PIPE'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '?'
+  - '&shift QUESTION'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -245,55 +245,6 @@ layers:
   - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  '5':
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [43, 46]
   k: '&to_numpad'
