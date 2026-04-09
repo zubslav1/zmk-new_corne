@@ -152,7 +152,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '7', h: F7}
   - {t: '8', h: F8}
-  - F9
+  - {t: '9', h: F9}
   - F10
   - END
   - '"'
