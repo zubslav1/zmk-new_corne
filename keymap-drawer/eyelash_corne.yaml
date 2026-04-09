@@ -252,5 +252,3 @@ combos:
   k: $$mdi:keyboard-esc$$
 - p: [17, 16]
   k: $$mdi:keyboard-tab$$
-- p: [12, 17]
-  k: {t: ']', s: '}'}
