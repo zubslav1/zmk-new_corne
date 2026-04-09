@@ -311,10 +311,10 @@
         numpad {
             display-name = "numpad";
             bindings = <
-&none  &none  &mt F7 N7        &mt F8 N8        &mt F9 N9         &kp F10                                &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
-&none  &none  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6   &kp F11                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
-&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12  &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
-                               &kp NUMBER_0     &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
+&none  &none  &kp F7  &kp F8        &kp F9            &kp F10                                &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
+&none  &none  &kp F4  &kp F5        &kp F6            &kp F11                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
+&none  &none  &kp F1  &kp F2        &kp F3            &kp F12  &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
+                      &kp NUMBER_0  &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
             >;
         };
 
