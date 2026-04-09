@@ -150,8 +150,8 @@ layers:
   numpad:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F7
-  - F8
+  - {t: '7', h: F7}
+  - {t: '8', h: F8}
   - F9
   - F10
   - END
@@ -163,9 +163,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F4
-  - F5
-  - F6
+  - {t: '4', h: F4}
+  - {t: '5', h: F5}
+  - {t: '6', h: F6}
   - F11
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
@@ -178,9 +178,9 @@ layers:
   - '#'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F1
-  - F2
-  - F3
+  - {t: '1', h: F1}
+  - {t: '2', h: F2}
+  - {t: '3', h: F3}
   - F12
   - $$mdi:volume-off$$
   - HOME
@@ -252,3 +252,5 @@ combos:
   k: $$mdi:keyboard-esc$$
 - p: [17, 16]
   k: $$mdi:keyboard-tab$$
+- p: [17, 12]
+  k: {t: ']', s: '}'}
