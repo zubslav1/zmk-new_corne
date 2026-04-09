@@ -93,11 +93,6 @@
             bindings = <&kp TAB>;
             key-positions = <17 16>;
         };
-
-        hard {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <12 17>;
-        };
     };
 
     macros {
