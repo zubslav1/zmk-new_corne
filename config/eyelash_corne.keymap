@@ -307,6 +307,20 @@
 
             label = "CTRL_S";
         };
+
+        delete_jupyter: delete_jupyter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp ESC>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_tap>,
+                <&kp D>;
+
+            label = "DELETE_JUPYTER";
+        };
     };
 
     keymap {
@@ -356,10 +370,10 @@
         sys {
             display-name = "sys";
             bindings = <
-&rgb_ug RGB_ON   &rgb_ug RGB_TOG  &bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2     &bt BT_DISC 3                                &kp END                    &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &none
-&rgb_ug RGB_OFF  &bt BT_SEL 0     &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3      &bt BT_SEL 4                 &left_end_word  &mkp LCLK  &start_of_word  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
-&kp LCTRL        &ctrl_z          &ctrl_x        &ctrl_c         &ctrl_v           &none          &kp C_MUTE                    &kp HOME                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
-                                                 &bt BT_CLR_ALL  &to_qwerty_layer  &mkp LCLK                                                               &kp INS          &kp DEL          &kp BACKSPACE
+&rgb_ug RGB_ON   &rgb_ug RGB_TOG  &bt BT_DISC 0  &bt BT_DISC 1    &bt BT_DISC 2     &bt BT_DISC 3                                &kp END                    &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &none
+&rgb_ug RGB_OFF  &bt BT_SEL 0     &bt BT_SEL 1   &delete_jupyter  &bt BT_SEL 3      &bt BT_SEL 4                 &left_end_word  &mkp LCLK  &start_of_word  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
+&kp LCTRL        &bt BT_SEL 2     &bt BT_SEL 3   &ctrl_c          &ctrl_v           &none          &kp C_MUTE                    &kp HOME                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
+                                                 &bt BT_CLR_ALL   &to_qwerty_layer  &mkp LCLK                                                               &kp INS          &kp DEL          &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
