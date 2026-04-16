@@ -98,6 +98,36 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <17 12>;
         };
+
+        left_sk {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <17 16>;
+        };
+
+        right_skb {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <23 24>;
+        };
+
+        left_br {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <4 3>;
+        };
+
+        right_br {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <8 9>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <31 32>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <37 38>;
+        };
     };
 
     macros {
