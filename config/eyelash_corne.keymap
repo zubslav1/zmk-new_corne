@@ -84,16 +84,6 @@
             key-positions = <43 46>;
         };
 
-        escape {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <17 16>;
-        };
-
         hard {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <17 12>;
@@ -101,32 +91,47 @@
 
         left_sk {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <17 16>;
+            key-positions = <16 15>;
         };
 
         right_skb {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <23 24>;
+            key-positions = <25 24>;
         };
 
         left_br {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <4 3>;
+            key-positions = <3 2>;
         };
 
         right_br {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <8 9>;
+            key-positions = <9 10>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <31 32>;
+            key-positions = <31 30>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <37 38>;
+            key-positions = <38 39>;
+        };
+
+        dot {
+            bindings = <&kp DOT>;
+            key-positions = <23 24>;
+        };
+
+        quotes {
+            bindings = <&kp SQT>;
+            key-positions = <17 16>;
+        };
+
+        comma {
+            bindings = <&kp COMMA>;
+            key-positions = <37 24>;
         };
     };
 
