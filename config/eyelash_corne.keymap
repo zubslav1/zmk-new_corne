@@ -173,7 +173,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_ON &to 4>,
+                <&rgb_ug RGB_COLOR_HSB(0,90,49) &rgb_ug RGB_ON &to 5>,
                 <&macro_release>;
 
             label = "TO_SYS";
@@ -360,10 +360,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                           &kp END                    &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G           &left_end_word  &mkp LCLK  &start_of_word  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to 5                    &kp HOME                   &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
-                                             &kp BACKSPACE    &mo 4            &kp SPACE                                                            &mt LEFT_WIN ENTER  &mo 1            &none
+&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                             &kp END                    &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G             &left_end_word  &mkp LCLK  &start_of_word  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                    &kp HOME                   &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
+                                             &kp BACKSPACE    &mo 4            &kp SPACE                                                              &mt LEFT_WIN ENTER  &mo 1            &none
             >;
 
             sensor-bindings = <&undo_redo>;
@@ -413,10 +413,10 @@
         kb_settings {
             display-name = "sys";
             bindings = <
-&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3     &bt BT_DISC 4                  &none         &none            &none            &none            &none            &none  &none
-&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3      &bt BT_SEL 4            &none  &none  &none  &none            &none            &none            &none            &none  &none
-&none  &none          &none          &none           &none             &none          &to 0           &none         &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none
-                                     &bt BT_CLR_ALL  &to_qwerty_layer  &none                                        &none            &none            &none
+&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2   &bt BT_DISC 3     &bt BT_DISC 4                             &none         &none            &none            &none            &none            &none  &none
+&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2    &bt BT_SEL 3      &bt BT_SEL 4                       &none  &none  &none  &none            &none            &none            &none            &none  &none
+&none  &none          &none          &none           &none             &none          &to_qwerty_layer           &none         &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none
+                                     &bt BT_CLR_ALL  &to_qwerty_layer  &none                                                   &none            &none            &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
