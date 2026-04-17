@@ -198,9 +198,9 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   nav:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
+  - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
   - Alt+$$mdi:keyboard-tab$$
-  - {t: 'Alt+$$mdi:keyboard-return$$', type: enter}
   - '&jupyter_clear_output'
   - '&add_cell_above_jupyter'
   - END
@@ -230,7 +230,7 @@ layers:
   - Ctl+X
   - Ctl+C
   - Ctl+V
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 'Alt+$$mdi:keyboard-return$$', type: enter}
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
