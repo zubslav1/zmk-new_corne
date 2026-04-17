@@ -44,7 +44,7 @@ layers:
   - {t: /, h: '&shift FSLH', s: '?'}
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - nav
+  - '&to_nav_mo'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', h: LEFT WIN}
   - SYMBOL_en
@@ -240,7 +240,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - INS
   - $$mdi:keyboard-tab$$
