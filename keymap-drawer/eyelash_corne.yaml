@@ -35,7 +35,7 @@ layers:
   - {t: C, h: '&shift C'}
   - {t: V, h: '&shift V'}
   - {t: B, h: '&shift B'}
-  - {t: sys, h: toggle}
+  - '&to_sys'
   - HOME
   - {t: N, h: '&shift N'}
   - {t: M, h: '&shift M'}
@@ -280,7 +280,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: QWERTY, h: toggle}
+  - '&to_qwerty_layer'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB HUI
   - RGB HUD
