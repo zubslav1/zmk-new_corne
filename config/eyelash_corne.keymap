@@ -339,9 +339,9 @@
         numpad {
             display-name = "numpad";
             bindings = <
-&none  &none  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9   &kp F10                                &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp PRINTSCREEN  &none
-&none  &none  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6   &kp F11                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN      &kp POUND
-&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12  &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none            &none
+&none  &none  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9   &kp F10                                &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp SLASH    &none
+&none  &none  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6   &kp F11                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN  &kp POUND
+&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12  &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none        &none
                                &kp NUMBER_0     &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
             >;
         };
@@ -349,10 +349,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LA(LEFT_SHIFT)  &kp LA(TAB)     &none      &jupyter_clear_output  &add_cell_above_jupyter                                &kp END                    &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_WIN     &kp LEFT_ALT        &kp LEFT_SHIFT  &kp LCTRL  &delete_jupyter        &add_cell_below_jupyter                &left_end_word  &mkp LCLK  &start_of_word  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &none               &kp LC(X)       &kp LC(C)  &kp LC(V)              &none                    &kp C_MUTE                    &kp HOME                   &none    &none           &none         &none      &none          &none
-                                                     &none      &none                  &none                                                                             &kp INS  &kp TAB         &none
+&kp LA(LC(DEL))  &kp LA(LEFT_SHIFT)  &kp LA(TAB)     &kp LA(ENTER)  &jupyter_clear_output  &add_cell_above_jupyter                                &kp END                    &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&kp LEFT_WIN     &kp LEFT_ALT        &kp LEFT_SHIFT  &kp LCTRL      &delete_jupyter        &add_cell_below_jupyter                &left_end_word  &mkp LCLK  &start_of_word  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LG(X)        &none               &kp LC(X)       &kp LC(C)      &kp LC(V)              &none                    &kp C_MUTE                    &kp HOME                   &none    &none           &none         &none      &none          &none
+                                                     &none          &none                  &none                                                                             &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
