@@ -237,7 +237,8 @@
             bindings =
                 <&macro_press>,
                 <&rgb_ug RGB_COLOR_HSB(116,90,49) &rgb_ug RGB_ON &mo 4>,
-                <&macro_release>;
+                <&macro_release>,
+                <&rgb_ug RGB_OFF &mo 4>;
 
             label = "TO_NAV_MO";
         };
