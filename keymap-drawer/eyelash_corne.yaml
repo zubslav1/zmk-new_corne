@@ -159,7 +159,7 @@ layers:
   - '7'
   - '8'
   - '9'
-  - PRINTSCREEN
+  - {t: /, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -200,7 +200,7 @@ layers:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - Alt+$$mdi:apple-keyboard-shift$$
   - Alt+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 'Alt+$$mdi:keyboard-return$$', type: enter}
   - '&jupyter_clear_output'
   - '&add_cell_above_jupyter'
   - END
