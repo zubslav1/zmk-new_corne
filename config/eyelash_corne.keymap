@@ -352,6 +352,14 @@
 
             label = "JUPYTER_CLEAR_OUTPUT";
         };
+
+        change_lang: change_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LEFT_ALT &kp LEFT_SHIFT>;
+
+            label = "CHANGE_LANG";
+        };
     };
 
     keymap {
@@ -401,10 +409,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&none         &none         &none      &none                  &add_cell_above_jupyter  &none                                &kp END                    &none    &kp HOME        &kp UP_ARROW  &kp END    &none          &none
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT         &delete_jupyter          &none                &left_end_word  &mkp LCLK  &start_of_word  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PG_UP      &none
-&none         &none         &none      &jupyter_clear_output  &add_cell_below_jupyter  &none  &kp C_MUTE                    &kp HOME                   &none    &none           &none         &none      &kp PAGE_DOWN  &none
-                                       &none                  &none                    &none                                                           &kp INS  &kp DEL         &none
+&none         &change_lang  &none           &none                  &add_cell_above_jupyter  &none                                &kp END                    &none    &kp HOME        &kp UP_ARROW  &kp END    &none          &none
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL              &delete_jupyter          &none                &left_end_word  &mkp LCLK  &start_of_word  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PG_UP      &none
+&none         &none         &none           &jupyter_clear_output  &add_cell_below_jupyter  &none  &kp C_MUTE                    &kp HOME                   &none    &none           &none         &none      &kp PAGE_DOWN  &none
+                                            &none                  &none                    &none                                                           &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
