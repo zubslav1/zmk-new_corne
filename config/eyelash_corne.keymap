@@ -191,48 +191,6 @@
             label = "TO_NUMPAD";
         };
 
-        shft_ctrl_z: shft_ctrl_z {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp Z>,
-                <&macro_release>,
-                <&kp LCTRL &kp LEFT_SHIFT>;
-
-            label = "SHFT_CTRL_Z";
-        };
-
-        ctrl_z: ctrl_z {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp Z>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "CTRL_Z";
-        };
-
-        ctrl_s: ctrl_s {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp Z>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "CTRL_S";
-        };
-
         delete_jupyter: delete_jupyter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -272,6 +230,17 @@
 
             label = "JUPYTER_CLEAR_OUTPUT";
         };
+
+        to_nav_mo: to_nav_mo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(116,90,49) &rgb_ug RGB_ON &mo 4>,
+                <&macro_release>;
+
+            label = "TO_NAV_MO";
+        };
     };
 
     keymap {
@@ -283,7 +252,7 @@
 &kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                                 &kp END                         &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
 &td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G             &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
 &kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                        &kp HOME                        &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
-                                             &kp BACKSPACE    &mo 4            &kp SPACE                                                                       &mt LEFT_WIN ENTER  &mo 1            &none
+                                             &kp BACKSPACE    &to_nav_mo       &kp SPACE                                                                       &mt LEFT_WIN ENTER  &mo 1            &none
             >;
 
             sensor-bindings = <&undo_redo>;
