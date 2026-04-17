@@ -133,6 +133,11 @@
             bindings = <&kp COMMA>;
             key-positions = <37 24>;
         };
+
+        ravno {
+            bindings = <&kp EQUAL>;
+            key-positions = <17 23>;
+        };
     };
 
     macros {
@@ -329,10 +334,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                              &kp END                    &auto_shift Y Y  &auto_shift U U        &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G              &left_end_word  &mkp LCLK  &start_of_word  &auto_shift H H  &auto_shift J J        &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B     &to 5                    &kp HOME                   &auto_shift N N  &auto_shift M M        &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
-                                             &kp LEFT_ALT     &mo 1            &mt LEFT_WIN ENTER                                                      &kp SPACE        &mo_rus_or_to_sys 2 0  &kp BACKSPACE
+&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                           &kp END                    &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G           &left_end_word  &mkp LCLK  &start_of_word  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to 5                    &kp HOME                   &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
+                                             &kp BACKSPACE    &mo 4            &kp SPACE                                                            &mt LEFT_WIN ENTER  &mo 1            &none
             >;
 
             sensor-bindings = <&undo_redo>;
@@ -341,10 +346,10 @@
         symbol_eng {
             display-name = "SYMBOL_en";
             bindings = <
-&kp ESC         &kp MINUS     &shift LESS_THAN   &shift GREATER_THAN  &shift EXCLAMATION  &shift PRCNT                             &kp UP_ARROW               &shift AMPERSAND  &kp COLON     &kp LBKT                 &kp RIGHT_BRACKET         &shift UNDERSCORE  &kp BSPC
-&kp LEFT_SHIFT  &shift PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE     &kp EQUAL           &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &shift PIPE       &kp DOT       &shift LEFT_PARENTHESIS  &shift RIGHT_PARENTHESIS  &shift QUESTION    &kp DEL
-&kp LCTRL       &shift CARET  &kp SLASH          &shift ASTERISK      &kp BACKSLASH       &shift POUND   &trans                    &kp DOWN_ARROW             &kp GRAVE         &kp COMMA     &shift LBRC              &shift RBRC               &shift AT_SIGN     &shift TILDE
-                                                 &kp LEFT_ALT         &none               &kp SPACE                                                           &kp RET           &kp LEFT_WIN  &kp BACKSPACE
+&kp ESC         &kp MINUS     &shift LESS_THAN   &shift GREATER_THAN  &shift EXCLAMATION  &shift PRCNT                             &kp UP_ARROW               &shift AMPERSAND  &kp COLON  &kp LBKT                 &kp RIGHT_BRACKET         &shift UNDERSCORE  &kp BSPC
+&kp LEFT_SHIFT  &shift PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE     &kp EQUAL           &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &shift PIPE       &kp DOT    &shift LEFT_PARENTHESIS  &shift RIGHT_PARENTHESIS  &shift QUESTION    &kp DEL
+&kp LCTRL       &shift CARET  &kp SLASH          &shift ASTERISK      &kp BACKSLASH       &shift POUND   &trans                    &kp DOWN_ARROW             &kp GRAVE         &kp COMMA  &shift LBRC              &shift RBRC               &shift AT_SIGN     &shift TILDE
+                                                 &kp LEFT_ALT         &mo 2               &kp SPACE                                                           &none             &none      &none
             >;
         };
 
@@ -353,7 +358,7 @@
 &kp ESC         &kp MINUS  &none             &none            &shift EXCLAMATION  &shift PERCENT                      &kp UP_ARROW               &none      &shift LS(NUMBER_6)  &none                 &none                  &shift UNDERSCORE  &auto_shift RIGHT_BRACKET RIGHT_BRACKET
 &kp LEFT_SHIFT  &kp PLUS   &shift AT_SIGN    &none            &kp EQUAL           &shift DOLLAR             &kp LEFT  &mkp LCLK       &kp RIGHT  &none      &kp SLASH            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &shift AMPERSAND   &kp DEL
 &kp LCTRL       &none      &shift BACKSLASH  &shift ASTERISK  &shift PIPE         &none           &trans              &kp DOWN_ARROW             &none      &shift QUESTION      &none                 &none                  &none              &none
-                                             &kp LEFT_ALT     &kp LEFT_WIN        &kp ENTER                                                      &kp SPACE  &none                &kp BACKSPACE
+                                             &kp LEFT_ALT     &none               &kp ENTER                                                      &kp SPACE  &none                &kp BACKSPACE
             >;
         };
 
@@ -370,10 +375,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&none  &none  &none  &none  &none             &none                                    &kp END                    &none            &kp HOME         &kp UP_ARROW     &kp END          &none          &none
-&none  &none  &none  &none  &none             &none                    &left_end_word  &mkp LCLK  &start_of_word  &none            &kp LEFT_ARROW   &kp DOWN         &kp RIGHT        &kp PG_UP      &none
-&none  &none  &none  &none  &none             &none      &kp C_MUTE                    &kp HOME                   &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp PAGE_DOWN  &none
-                     &none  &to_qwerty_layer  &mkp LCLK                                                           &kp INS          &kp DEL          &kp BACKSPACE
+&none         &none         &none      &none           &none  &none                                &kp END                    &none    &kp HOME        &kp UP_ARROW  &kp END    &none          &none
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none  &none                &left_end_word  &mkp LCLK  &start_of_word  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PG_UP      &none
+&none         &none         &none      &none           &none  &none  &kp C_MUTE                    &kp HOME                   &none    &none           &none         &none      &kp PAGE_DOWN  &none
+                                       &none           &none  &none                                                           &kp INS  &kp DEL         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
