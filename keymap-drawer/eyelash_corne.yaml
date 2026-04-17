@@ -20,9 +20,9 @@ layers:
   - {t: D, h: '&shift D'}
   - {t: F, h: '&shift F'}
   - {t: G, h: '&shift G'}
-  - '&left_end_word'
+  - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
-  - '&start_of_word'
+  - Ctl+$$mdi:arrow-right-bold$$
   - {t: H, h: '&shift H'}
   - {t: J, h: '&shift J'}
   - {t: K, h: '&shift K'}
@@ -216,9 +216,9 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
   - '&add_cell_below_jupyter'
-  - '&left_end_word'
+  - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
-  - '&start_of_word'
+  - Ctl+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
