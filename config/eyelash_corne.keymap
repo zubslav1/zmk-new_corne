@@ -322,8 +322,8 @@
             display-name = "nav";
             bindings = <
 &kp LA(LC(DEL))  &kp LA(LEFT_SHIFT)  &kp LA(TAB)     &kp LA(ENTER)  &jupyter_clear_output  &add_cell_above_jupyter                                    &kp END                         &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_WIN     &kp LEFT_ALT        &kp LEFT_SHIFT  &kp LCTRL      &delete_jupyter        &add_cell_below_jupyter                &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &kp LC(A)           &kp LC(X)       &kp LC(C)      &kp LC(V)              &none                    &kp C_MUTE                        &kp HOME                        &none    &none           &none         &none      &none          &none
+&kp LEFT_WIN     &kp LA(A)           &kp LEFT_SHIFT  &kp LCTRL      &delete_jupyter        &add_cell_below_jupyter                &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LG(X)        &kp LEFT_ALT        &kp LC(X)       &kp LC(C)      &kp LC(V)              &none                    &kp C_MUTE                        &kp HOME                        &none    &none           &none         &none      &none          &none
                                                      &none          &none                  &none                                                                                      &kp INS  &kp TAB         &none
             >;
 
