@@ -191,34 +191,6 @@
             label = "TO_NUMPAD";
         };
 
-        left_end_word: left_end_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp LEFT_ARROW>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "LEFT_END_WORD";
-        };
-
-        start_of_word: start_of_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "START_OF_WORD";
-        };
-
         shft_ctrl_z: shft_ctrl_z {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -308,10 +280,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                             &kp END                    &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G             &left_end_word  &mkp LCLK  &start_of_word  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                    &kp HOME                   &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
-                                             &kp BACKSPACE    &mo 4            &kp SPACE                                                              &mt LEFT_WIN ENTER  &mo 1            &none
+&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                                 &kp END                         &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
+&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G             &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                        &kp HOME                        &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
+                                             &kp BACKSPACE    &mo 4            &kp SPACE                                                                       &mt LEFT_WIN ENTER  &mo 1            &none
             >;
 
             sensor-bindings = <&undo_redo>;
@@ -349,10 +321,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LA(LEFT_SHIFT)  &kp LA(TAB)     &kp LA(ENTER)  &jupyter_clear_output  &add_cell_above_jupyter                                &kp END                    &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_WIN     &kp LEFT_ALT        &kp LEFT_SHIFT  &kp LCTRL      &delete_jupyter        &add_cell_below_jupyter                &left_end_word  &mkp LCLK  &start_of_word  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &kp LC(A)           &kp LC(X)       &kp LC(C)      &kp LC(V)              &none                    &kp C_MUTE                    &kp HOME                   &none    &none           &none         &none      &none          &none
-                                                     &none          &none                  &none                                                                             &kp INS  &kp TAB         &none
+&kp LA(LC(DEL))  &kp LA(LEFT_SHIFT)  &kp LA(TAB)     &kp LA(ENTER)  &jupyter_clear_output  &add_cell_above_jupyter                                    &kp END                         &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&kp LEFT_WIN     &kp LEFT_ALT        &kp LEFT_SHIFT  &kp LCTRL      &delete_jupyter        &add_cell_below_jupyter                &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LG(X)        &kp LC(A)           &kp LC(X)       &kp LC(C)      &kp LC(V)              &none                    &kp C_MUTE                        &kp HOME                        &none    &none           &none         &none      &none          &none
+                                                     &none          &none                  &none                                                                                      &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
