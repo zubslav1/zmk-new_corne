@@ -198,7 +198,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&change_lang'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&add_cell_above_jupyter'
@@ -212,8 +212,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&left_end_word'
@@ -243,7 +243,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - INS
-  - $$mdi:backspace-reverse-outline$$
+  - $$mdi:keyboard-tab$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   sys:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
