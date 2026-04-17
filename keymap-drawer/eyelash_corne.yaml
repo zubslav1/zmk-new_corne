@@ -211,7 +211,7 @@ layers:
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LEFT WIN
-  - $$mdi:apple-keyboard-option$$
+  - Alt+A
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
@@ -226,7 +226,7 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - Ctl+A
+  - $$mdi:apple-keyboard-option$$
   - Ctl+X
   - Ctl+C
   - Ctl+V
