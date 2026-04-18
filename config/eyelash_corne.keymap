@@ -128,6 +128,21 @@
             bindings = <&kp EQUAL>;
             key-positions = <17 23>;
         };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <4 8>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <32 37>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <33 36>;
+        };
     };
 
     macros {
