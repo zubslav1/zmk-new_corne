@@ -267,10 +267,10 @@
         symbol_eng {
             display-name = "SYMBOL_en";
             bindings = <
-&kp ESC         &kp MINUS     &shift LESS_THAN   &shift GREATER_THAN  &shift EXCLAMATION  &shift PRCNT                             &kp UP_ARROW               &shift AMPERSAND  &kp COLON     &kp LBKT                 &kp RIGHT_BRACKET         &shift UNDERSCORE  &kp BSPC
-&kp LEFT_SHIFT  &shift PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE     &kp EQUAL           &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &shift PIPE       &kp KP_DOT    &shift LEFT_PARENTHESIS  &shift RIGHT_PARENTHESIS  &shift QUESTION    &kp DEL
-&kp LCTRL       &shift CARET  &kp SLASH          &shift ASTERISK      &kp BACKSLASH       &shift POUND   &trans                    &kp DOWN_ARROW             &kp GRAVE         &kp KP_COMMA  &shift LBRC              &shift RBRC               &shift AT_SIGN     &shift TILDE
-                                                 &kp BACKSPACE        &mo 2               &kp DELETE                                                          &none             &none         &none
+&kp ESC         &kp MINUS     &shift LESS_THAN   &shift GREATER_THAN  &shift EXCLAMATION  &shift PRCNT                             &kp UP_ARROW               &shift AMPERSAND  &kp COLON  &kp LBKT                 &kp RIGHT_BRACKET         &shift UNDERSCORE  &kp BSPC
+&kp LEFT_SHIFT  &shift PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE     &kp EQUAL           &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &shift PIPE       &kp DOT    &shift LEFT_PARENTHESIS  &shift RIGHT_PARENTHESIS  &shift QUESTION    &kp DEL
+&kp LCTRL       &shift CARET  &kp SLASH          &shift ASTERISK      &kp BACKSLASH       &shift POUND   &trans                    &kp DOWN_ARROW             &kp GRAVE         &kp COMMA  &shift LBRC              &shift RBRC               &shift AT_SIGN     &shift TILDE
+                                                 &kp BACKSPACE        &mo 2               &kp DELETE                                                          &none             &none      &none
             >;
         };
 
