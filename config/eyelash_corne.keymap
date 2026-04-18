@@ -121,7 +121,7 @@
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <37 38>;
+            key-positions = <37 24>;
         };
 
         ravno {
@@ -141,12 +141,12 @@
 
         underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <33 36>;
+            key-positions = <16 24>;
         };
 
         colon {
             bindings = <&kp COLON>;
-            key-positions = <24 37>;
+            key-positions = <23 25>;
         };
     };
 
