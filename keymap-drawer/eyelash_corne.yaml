@@ -73,7 +73,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
   - '&shift PIPE'
-  - KP DOT
+  - {t: ., s: '>'}
   - '&shift LEFT_PARENTHESIS'
   - '&shift RIGHT_PARENTHESIS'
   - '&shift QUESTION'
@@ -87,7 +87,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
-  - KP COMMA
+  - {t: ',', s: <}
   - '&shift LBRC'
   - '&shift RBRC'
   - '&shift AT_SIGN'
