@@ -52,19 +52,19 @@ layers:
   SYMBOL_en:
   - $$mdi:keyboard-esc$$
   - {t: '-', s: _}
-  - '&shift LESS_THAN'
-  - '&shift GREATER_THAN'
-  - '&shift EXCLAMATION'
-  - '&shift PRCNT'
+  - '&combos_vrm LESS_THAN'
+  - '&combos_vrm GREATER_THAN'
+  - '&combos_vrm EXCLAMATION'
+  - '&combos_vrm PRCNT'
   - $$mdi:arrow-up-bold$$
-  - '&shift AMPERSAND'
+  - '&combos_vrm AMPERSAND'
   - ':'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - '&shift UNDERSCORE'
+  - '&combos_vrm UNDERSCORE'
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-shift$$
-  - '&shift PLUS'
+  - '&combos_vrm PLUS'
   - '"'
   - {t: '''', s: '"'}
   - {t: '=', s: +}
@@ -72,26 +72,26 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
-  - '&shift PIPE'
+  - '&combos_vrm PIPE'
   - {t: ., s: '>'}
-  - '&shift LEFT_PARENTHESIS'
-  - '&shift RIGHT_PARENTHESIS'
-  - '&shift QUESTION'
+  - '&combos_vrm LEFT_PARENTHESIS'
+  - '&combos_vrm RIGHT_PARENTHESIS'
+  - '&combos_vrm QUESTION'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - '&shift CARET'
+  - '&combos_vrm CARET'
   - {t: /, s: '?'}
-  - '&shift ASTERISK'
+  - '&combos_vrm ASTERISK'
   - {t: \, s: '|'}
-  - '&shift POUND'
+  - '&combos_vrm POUND'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
   - {t: ',', s: <}
-  - '&shift LBRC'
-  - '&shift RBRC'
-  - '&shift AT_SIGN'
-  - '&shift TILDE'
+  - '&combos_vrm LBRC'
+  - '&combos_vrm RBRC'
+  - '&combos_vrm AT_SIGN'
+  - '&combos_vrm TILDE'
   - {t: '$$mdi:backspace$$', type: backspace}
   - symbol_rus
   - $$mdi:backspace-reverse-outline$$
@@ -103,21 +103,21 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift EXCLAMATION'
-  - '&shift PERCENT'
+  - '&combos_vrm EXCLAMATION'
+  - '&combos_vrm PERCENT'
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift LS(NUMBER_6)'
+  - '&combos_vrm LS(NUMBER_6)'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&shift UNDERSCORE'
   - {t: ']', h: '&shift RIGHT_BRACKET', s: '}'}
   - $$mdi:apple-keyboard-shift$$
   - +
-  - '&shift AT_SIGN'
+  - '&combos_vrm AT_SIGN'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
-  - '&shift DOLLAR'
+  - '&combos_vrm DOLLAR'
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
@@ -125,18 +125,18 @@ layers:
   - {t: /, s: '?'}
   - (
   - )
-  - '&shift AMPERSAND'
+  - '&combos_vrm AMPERSAND'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift BACKSLASH'
-  - '&shift ASTERISK'
-  - '&shift PIPE'
+  - '&combos_vrm BACKSLASH'
+  - '&combos_vrm ASTERISK'
+  - '&combos_vrm PIPE'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift QUESTION'
+  - '&combos_vrm QUESTION'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -201,7 +201,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
   - '&alt_combos_vrm TAB'
-  - '&jupyter_clear_output'
+  - '&alt_combos_vrm C'
   - '&add_cell_above_jupyter'
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
