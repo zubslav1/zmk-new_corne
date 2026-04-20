@@ -334,6 +334,23 @@
 
             label = "ALT_COMBO";
         };
+
+        clear_ouput_jupyter: clear_ouput_jupyter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp ESC>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "CLEAR_OUPUT_JUPYTER";
+        };
     };
 
     keymap {
@@ -383,10 +400,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LEFT_ALT        &kp LA(LEFT_SHIFT)  &alt_combo TAB      &alt_combo C        &add_cell_above_jupyter                                             &kp END                            &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_WIN     &ctrl_combos_vrm A  &kp LEFT_SHIFT      &kp LCTRL           &delete_jupyter     &add_cell_below_jupyter                &ctrl_combos_vrm LEFT_ARROW  &mkp LCLK  &ctrl_combos_vrm RIGHT  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &ctrl_combos_vrm Z  &ctrl_combos_vrm X  &ctrl_combos_vrm C  &ctrl_combos_vrm V  &alt_combo ENTER         &kp C_MUTE                                 &kp HOME                           &none    &none           &none         &none      &none          &none
-                                                         &none               &none               &none                                                                                                  &kp INS  &kp TAB         &none
+&kp LA(LC(DEL))  &kp LEFT_ALT        &kp LA(LEFT_SHIFT)  &alt_combo TAB      &clear_ouput_jupyter C  &add_cell_above_jupyter                                             &kp END                            &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&kp LEFT_WIN     &ctrl_combos_vrm A  &kp LEFT_SHIFT      &kp LCTRL           &delete_jupyter         &add_cell_below_jupyter                &ctrl_combos_vrm LEFT_ARROW  &mkp LCLK  &ctrl_combos_vrm RIGHT  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LG(X)        &ctrl_combos_vrm Z  &ctrl_combos_vrm X  &ctrl_combos_vrm C  &ctrl_combos_vrm V      &alt_combo ENTER         &kp C_MUTE                                 &kp HOME                           &none    &none           &none         &none      &none          &none
+                                                         &none               &none                   &none                                                                                                  &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
