@@ -272,6 +272,21 @@
 
             label = "TO_NAV_MO";
         };
+
+        shift_for_vrm: shift_for_vrm {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "SHIFT_FOR_VRM";
+        };
     };
 
     keymap {
