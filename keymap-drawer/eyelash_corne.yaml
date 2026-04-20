@@ -202,7 +202,7 @@ layers:
   - '&alt_tab_vrm'
   - '&delete_jupyter'
   - '&add_cell_above_jupyter'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&ctrl_for_vrm F'
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
