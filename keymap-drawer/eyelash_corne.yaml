@@ -192,15 +192,15 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '0'
   - '&to_qwerty_layer'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - '0'
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   nav:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
-  - Alt+$$mdi:keyboard-tab$$
+  - '&alt_combos_vrm TAB'
   - '&jupyter_clear_output'
   - '&add_cell_above_jupyter'
   - END
@@ -211,14 +211,14 @@ layers:
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LEFT WIN
-  - Ctl+A
+  - '&ctrl_combos_vrm A'
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
   - '&add_cell_below_jupyter'
-  - Ctl+$$mdi:arrow-left-bold$$
+  - '&ctrl_combos_vrm LEFT_ARROW'
   - $$mdi:mouse-left-click-outline$$
-  - Ctl+$$mdi:arrow-right-bold$$
+  - '&ctrl_combos_vrm RIGHT'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -226,11 +226,11 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - $$mdi:apple-keyboard-option$$
-  - Ctl+X
-  - Ctl+C
-  - Ctl+V
-  - {t: 'Alt+$$mdi:keyboard-return$$', type: enter}
+  - '&ctrl_combos_vrm Z'
+  - '&ctrl_combos_vrm X'
+  - '&ctrl_combos_vrm C'
+  - '&ctrl_combos_vrm V'
+  - '&alt_combos_vrm ENTER'
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
