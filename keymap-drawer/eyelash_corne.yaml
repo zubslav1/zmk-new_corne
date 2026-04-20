@@ -210,8 +210,8 @@ layers:
   - END
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - LEFT WIN
-  - {t: '1', s: '!'}
+  - $$mdi:apple-keyboard-option$$
+  - '&ctrl_for_vrm A'
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
@@ -226,11 +226,11 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '1', s: '!'}
-  - {t: '1', s: '!'}
-  - {t: '1', s: '!'}
-  - {t: '1', s: '!'}
-  - {t: '1', s: '!'}
+  - '&ctrl_for_vrm Z'
+  - '&ctrl_for_vrm X'
+  - '&ctrl_for_vrm C'
+  - '&ctrl_for_vrm V'
+  - '&ctrl_for_vrm ENTER'
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
