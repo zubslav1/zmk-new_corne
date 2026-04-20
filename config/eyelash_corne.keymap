@@ -230,7 +230,13 @@
         add_cell_above_jupyter: add_cell_above_jupyter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp ESC>, <&macro_tap>, <&kp A>;
+            bindings =
+                <&macro_tap>,
+                <&kp ESC>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_tap>,
+                <&kp ENTER>;
 
             label = "ADD_CELL_ABOVE_JUPYTER";
         };
@@ -238,7 +244,13 @@
         add_cell_below_jupyter: add_cell_below_jupyter {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp ESC>, <&macro_tap>, <&kp B>;
+            bindings =
+                <&macro_tap>,
+                <&kp ESC>,
+                <&macro_tap>,
+                <&kp B>,
+                <&macro_tap>,
+                <&kp ENTER>;
 
             label = "ADD_CELL_BELOW_JUPYTER";
         };
@@ -246,7 +258,14 @@
         jupyter_clear_output: jupyter_clear_output {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_ALT &kp C>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "JUPYTER_CLEAR_OUTPUT";
         };
@@ -266,6 +285,36 @@
                 <&rgb_ug RGB_OFF>;
 
             label = "TO_NAV_MO";
+        };
+
+        ctrl_combos_vrm: new_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &macro_param_1to1>,
+                <&macro_tap_time 250>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "NEW_MACRO";
+        };
+
+        alt_combos_vrm: shift_combos_vrm {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &macro_param_1to1>,
+                <&macro_tap_time 250>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "SHIFT_COMBOS_VRM";
         };
     };
 
@@ -306,20 +355,20 @@
         numpad {
             display-name = "numpad";
             bindings = <
-&none  &none  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9   &kp F10                                &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp SLASH    &none
-&none  &none  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6   &kp F11                &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6  &kp AT_SIGN  &kp POUND
-&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12  &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3  &none        &none
-                               &kp NUMBER_0     &to_qwerty_layer  &trans                                                       &trans             &kp NUMBER_0  &kp BACKSPACE
+&none  &none  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9   &kp F10                                      &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH    &none
+&none  &none  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6   &kp F11                      &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp AT_SIGN  &kp POUND
+&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12        &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none
+                               &kp NUMBER_0     &to_qwerty_layer  &kp BACKSPACE                                                      &trans             &kp NUMBER_0  &none
             >;
         };
 
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LEFT_ALT  &kp LA(LEFT_SHIFT)  &kp LA(TAB)  &jupyter_clear_output  &add_cell_above_jupyter                                    &kp END                         &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_WIN     &kp LC(A)     &kp LEFT_SHIFT      &kp LCTRL    &delete_jupyter        &add_cell_below_jupyter                &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &kp LEFT_ALT  &kp LC(X)           &kp LC(C)    &kp LC(V)              &kp LA(ENTER)            &kp C_MUTE                        &kp HOME                        &none    &none           &none         &none      &none          &none
-                                                   &none        &none                  &none                                                                                      &kp INS  &kp TAB         &none
+&kp LA(LC(DEL))  &kp LEFT_ALT        &kp LA(LEFT_SHIFT)  &alt_combos_vrm TAB  &jupyter_clear_output  &add_cell_above_jupyter                                             &kp END                            &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&kp LEFT_WIN     &ctrl_combos_vrm A  &kp LEFT_SHIFT      &kp LCTRL            &delete_jupyter        &add_cell_below_jupyter                &ctrl_combos_vrm LEFT_ARROW  &mkp LCLK  &ctrl_combos_vrm RIGHT  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LG(X)        &ctrl_combos_vrm Z  &ctrl_combos_vrm X  &ctrl_combos_vrm C   &ctrl_combos_vrm V     &alt_combos_vrm ENTER    &kp C_MUTE                                 &kp HOME                           &none    &none           &none         &none      &none          &none
+                                                         &none                &none                  &none                                                                                                  &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
