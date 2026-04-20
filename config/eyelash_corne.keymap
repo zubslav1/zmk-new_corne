@@ -4,6 +4,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -288,51 +289,6 @@
 
             label = "CLEAR_OUPUT_JUPYTER";
         };
-
-        ctrl_combos_vrm: ctrl_combos_vrm {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_wait_time 200>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LCTRL>;
-
-            label = "CTRL_COMBOS_VRM";
-        };
-
-        alt_combo: alt_combo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 200>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_COMBO";
-        };
-
-        combos_vrm: combos_vrm {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_wait_time 200>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
-            label = "COMBOS_VRM";
-        };
     };
 
     keymap {
@@ -353,19 +309,19 @@
         symbol_eng {
             display-name = "SYMBOL_en";
             bindings = <
-&kp ESC         &kp MINUS          &combos_vrm LESS_THAN  &combos_vrm GREATER_THAN  &combos_vrm EXCLAMATION  &combos_vrm PRCNT                            &kp UP_ARROW               &combos_vrm AMPERSAND  &kp COLON  &kp LBKT                      &kp RIGHT_BRACKET              &combos_vrm UNDERSCORE  &kp BSPC
-&kp LEFT_SHIFT  &combos_vrm PLUS   &kp DOUBLE_QUOTES      &kp SINGLE_QUOTE          &kp EQUAL                &kp SEMICOLON                &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &combos_vrm PIPE       &kp DOT    &combos_vrm LEFT_PARENTHESIS  &combos_vrm RIGHT_PARENTHESIS  &combos_vrm QUESTION    &kp DEL
-&kp LCTRL       &combos_vrm CARET  &kp SLASH              &combos_vrm ASTERISK      &kp BACKSLASH            &combos_vrm POUND  &trans                    &kp DOWN_ARROW             &kp GRAVE              &kp COMMA  &combos_vrm LBRC              &combos_vrm RBRC               &combos_vrm AT_SIGN     &combos_vrm TILDE
-                                                          &kp BACKSPACE             &mo 2                    &kp DELETE                                                              &none                  &none      &none
+&kp ESC         &kp MINUS  &kp N1             &kp N1            &kp N1         &kp N1                                   &kp UP_ARROW               &kp N1     &kp COLON  &kp LBKT  &kp RIGHT_BRACKET  &kp N1  &kp BSPC
+&kp LEFT_SHIFT  &none      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL      &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &kp N1     &kp DOT    &kp N1    &kp N1             &kp N1  &kp DEL
+&kp LCTRL       &kp N1     &kp SLASH          &kp N1            &kp BACKSLASH  &kp U          &trans                    &kp DOWN_ARROW             &kp GRAVE  &kp COMMA  &kp N1    &kp N1             &kp N1  &kp N1
+                                              &kp BACKSPACE     &mo 2          &kp DELETE                                                          &none      &none      &none
             >;
         };
 
         symbol_rus {
             bindings = <
-&kp ESC         &kp MINUS  &none                  &none                 &combos_vrm EXCLAMATION  &combos_vrm PERCENT                      &kp UP_ARROW               &none  &combos_vrm LS(NUMBER_6)  &none                 &none                  &shift UNDERSCORE      &auto_shift RIGHT_BRACKET RIGHT_BRACKET
-&kp LEFT_SHIFT  &kp PLUS   &combos_vrm AT_SIGN    &none                 &kp EQUAL                &combos_vrm DOLLAR             &kp LEFT  &mkp LCLK       &kp RIGHT  &none  &kp SLASH                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &combos_vrm AMPERSAND  &kp DEL
-&kp LCTRL       &none      &combos_vrm BACKSLASH  &combos_vrm ASTERISK  &combos_vrm PIPE         &none                &trans              &kp DOWN_ARROW             &none  &combos_vrm QUESTION      &none                 &none                  &none                  &none
-                                                  &none                 &none                    &none                                                               &none  &none                     &none
+&kp ESC         &kp MINUS  &none  &none  &kp A      &kp A                      &kp UP_ARROW               &none  &kp A      &none                 &none                  &shift UNDERSCORE  &auto_shift RIGHT_BRACKET RIGHT_BRACKET
+&kp LEFT_SHIFT  &kp PLUS   &kp A  &none  &kp EQUAL  &kp A            &kp LEFT  &mkp LCLK       &kp RIGHT  &none  &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp A              &kp DEL
+&kp LCTRL       &none      &kp A  &kp A  &kp A      &none  &trans              &kp DOWN_ARROW             &none  &kp A      &none                 &none                  &none              &none
+                                  &none  &none      &none                                                 &none  &none      &none
             >;
         };
 
@@ -382,10 +338,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LEFT_ALT        &kp LA(LEFT_SHIFT)  &alt_combo TAB      &clear_ouput_jupyter C  &add_cell_above_jupyter                                             &kp END                            &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_WIN     &ctrl_combos_vrm A  &kp LEFT_SHIFT      &kp LCTRL           &delete_jupyter         &add_cell_below_jupyter                &ctrl_combos_vrm LEFT_ARROW  &mkp LCLK  &ctrl_combos_vrm RIGHT  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &ctrl_combos_vrm Z  &ctrl_combos_vrm X  &ctrl_combos_vrm C  &ctrl_combos_vrm V      &alt_combo ENTER         &kp C_MUTE                                 &kp HOME                           &none    &none           &none         &none      &none          &none
-                                                         &none               &none                   &none                                                                                                  &kp INS  &kp TAB         &none
+&kp LA(LC(DEL))  &kp LEFT_ALT  &kp LA(LEFT_SHIFT)  &kp N1     &clear_ouput_jupyter C  &add_cell_above_jupyter                       &kp END                &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&kp LEFT_WIN     &kp N1        &kp LEFT_SHIFT      &kp LCTRL  &delete_jupyter         &add_cell_below_jupyter                &kp A  &mkp LCLK  &bl BL_OFF  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LG(X)        &kp N1        &kp N1              &kp N1     &kp N1                  &kp N1                   &kp C_MUTE           &kp HOME               &none    &none           &none         &none      &none          &none
+                                                   &none      &none                   &none                                                                &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
