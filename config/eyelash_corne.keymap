@@ -272,52 +272,36 @@
             label = "TO_NAV_MO";
         };
 
-        ctrl_combos_vrm: new_macro {
+        clear_ouput_jupyter: clear_ouput_jupyter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp ESC>,
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "CLEAR_OUPUT_JUPYTER";
+        };
+
+        ctrl_combos_vrm: ctrl_combos_vrm {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_wait_time 200>,
-                <&macro_param_1to1>,
                 <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
                 <&kp LCTRL>;
 
-            label = "NEW_MACRO";
-        };
-
-        combos_vrm: combos_vrm {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_wait_time 200>,
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
-            label = "SHIFT_COMBOS_VRM";
-        };
-
-        alt_tab: alt_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 200>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_wait_time 200>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_TAB";
+            label = "CTRL_COMBOS_VRM";
         };
 
         alt_combo: alt_combo {
@@ -335,21 +319,19 @@
             label = "ALT_COMBO";
         };
 
-        clear_ouput_jupyter: clear_ouput_jupyter {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        combo_vrm: combo_vrm {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
-                <&macro_tap>,
-                <&kp ESC>,
                 <&macro_press>,
-                <&kp LEFT_ALT>,
+                <&kp LEFT_SHIFT>,
                 <&macro_wait_time 200>,
                 <&macro_tap>,
-                <&kp C>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&kp LEFT_ALT>;
+                <&kp LEFT_SHIFT>;
 
-            label = "CLEAR_OUPUT_JUPYTER";
+            label = "COMBO_VRM";
         };
     };
 
