@@ -52,19 +52,19 @@ layers:
   SYMBOL_en:
   - $$mdi:keyboard-esc$$
   - {t: '-', s: _}
-  - '&combos_vrm LESS_THAN'
-  - '&combos_vrm GREATER_THAN'
-  - '&combos_vrm EXCLAMATION'
-  - '&combos_vrm PRCNT'
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
   - $$mdi:arrow-up-bold$$
-  - '&combos_vrm AMPERSAND'
+  - {t: '1', s: '!'}
   - ':'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - '&combos_vrm UNDERSCORE'
+  - {t: '1', s: '!'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-shift$$
-  - '&combos_vrm PLUS'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '"'
   - {t: '''', s: '"'}
   - {t: '=', s: +}
@@ -72,26 +72,26 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
-  - '&combos_vrm PIPE'
+  - {t: '1', s: '!'}
   - {t: ., s: '>'}
-  - '&combos_vrm LEFT_PARENTHESIS'
-  - '&combos_vrm RIGHT_PARENTHESIS'
-  - '&combos_vrm QUESTION'
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - '&combos_vrm CARET'
+  - {t: '1', s: '!'}
   - {t: /, s: '?'}
-  - '&combos_vrm ASTERISK'
+  - {t: '1', s: '!'}
   - {t: \, s: '|'}
-  - '&combos_vrm POUND'
+  - U
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
   - {t: ',', s: <}
-  - '&combos_vrm LBRC'
-  - '&combos_vrm RBRC'
-  - '&combos_vrm AT_SIGN'
-  - '&combos_vrm TILDE'
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - symbol_rus
   - $$mdi:backspace-reverse-outline$$
@@ -103,21 +103,21 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&combos_vrm EXCLAMATION'
-  - '&combos_vrm PERCENT'
+  - A
+  - A
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&combos_vrm LS(NUMBER_6)'
+  - A
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&shift UNDERSCORE'
   - {t: ']', h: '&shift RIGHT_BRACKET', s: '}'}
   - $$mdi:apple-keyboard-shift$$
   - +
-  - '&combos_vrm AT_SIGN'
+  - A
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
-  - '&combos_vrm DOLLAR'
+  - A
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
@@ -125,18 +125,18 @@ layers:
   - {t: /, s: '?'}
   - (
   - )
-  - '&combos_vrm AMPERSAND'
+  - A
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&combos_vrm BACKSLASH'
-  - '&combos_vrm ASTERISK'
-  - '&combos_vrm PIPE'
+  - A
+  - A
+  - A
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&combos_vrm QUESTION'
+  - A
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -200,7 +200,7 @@ layers:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
-  - '&alt_combo TAB'
+  - {t: '1', s: '!'}
   - '&clear_ouput_jupyter C'
   - '&add_cell_above_jupyter'
   - END
@@ -211,14 +211,14 @@ layers:
   - PG UP
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - LEFT WIN
-  - '&ctrl_combos_vrm A'
+  - {t: '1', s: '!'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
   - '&add_cell_below_jupyter'
-  - '&ctrl_combos_vrm LEFT_ARROW'
+  - A
   - $$mdi:mouse-left-click-outline$$
-  - '&ctrl_combos_vrm RIGHT'
+  - '&bl BL_OFF'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -226,11 +226,11 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - '&ctrl_combos_vrm Z'
-  - '&ctrl_combos_vrm X'
-  - '&ctrl_combos_vrm C'
-  - '&ctrl_combos_vrm V'
-  - '&alt_combo ENTER'
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
+  - {t: '1', s: '!'}
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
