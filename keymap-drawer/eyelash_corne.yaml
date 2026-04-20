@@ -200,8 +200,8 @@ layers:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
-  - '&alt_tab'
-  - '&alt_combos_vrm C'
+  - '&alt_combo TAB'
+  - '&alt_combo C'
   - '&add_cell_above_jupyter'
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -230,7 +230,7 @@ layers:
   - '&ctrl_combos_vrm X'
   - '&ctrl_combos_vrm C'
   - '&ctrl_combos_vrm V'
-  - '&alt_combos_vrm ENTER'
+  - '&alt_combo ENTER'
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
