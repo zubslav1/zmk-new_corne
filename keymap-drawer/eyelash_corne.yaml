@@ -200,7 +200,7 @@ layers:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
-  - '&alt_combos_vrm TAB'
+  - '&alt_tab'
   - '&alt_combos_vrm C'
   - '&add_cell_above_jupyter'
   - END
