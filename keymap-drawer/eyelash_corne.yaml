@@ -200,8 +200,8 @@ layers:
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
-  - {t: '1', s: '!'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&alt_tab_vrm'
+  - '&clear_cell_jupyter'
   - '&add_cell_above_jupyter'
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -216,9 +216,9 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - '&delete_jupyter'
   - '&add_cell_below_jupyter'
-  - A
+  - '&ctrl_for_vrm LEFT_ARROW'
   - $$mdi:mouse-left-click-outline$$
-  - '&bl BL_OFF'
+  - '&ctrl_for_vrm RIGHT_ARROW'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -230,7 +230,7 @@ layers:
   - '&ctrl_for_vrm X'
   - '&ctrl_for_vrm C'
   - '&ctrl_for_vrm V'
-  - '&ctrl_for_vrm ENTER'
+  - '&shift_for_vrm ENTER'
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
