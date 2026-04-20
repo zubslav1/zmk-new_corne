@@ -288,22 +288,6 @@
             label = "NEW_MACRO";
         };
 
-        alt_combos_vrm: shift_combos_vrm {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 200>,
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "SHIFT_COMBOS_VRM";
-        };
-
         combos_vrm: combos_vrm {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -334,6 +318,21 @@
                 <&kp LEFT_ALT>;
 
             label = "ALT_TAB";
+        };
+
+        alt_combo: alt_combo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 200>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_COMBO";
         };
     };
 
@@ -384,9 +383,9 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LEFT_ALT        &kp LA(LEFT_SHIFT)  &alt_tab            &alt_combos_vrm C   &add_cell_above_jupyter                                             &kp END                            &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&kp LA(LC(DEL))  &kp LEFT_ALT        &kp LA(LEFT_SHIFT)  &alt_combo TAB      &alt_combo C        &add_cell_above_jupyter                                             &kp END                            &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
 &kp LEFT_WIN     &ctrl_combos_vrm A  &kp LEFT_SHIFT      &kp LCTRL           &delete_jupyter     &add_cell_below_jupyter                &ctrl_combos_vrm LEFT_ARROW  &mkp LCLK  &ctrl_combos_vrm RIGHT  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &ctrl_combos_vrm Z  &ctrl_combos_vrm X  &ctrl_combos_vrm C  &ctrl_combos_vrm V  &alt_combos_vrm ENTER    &kp C_MUTE                                 &kp HOME                           &none    &none           &none         &none      &none          &none
+&kp LG(X)        &ctrl_combos_vrm Z  &ctrl_combos_vrm X  &ctrl_combos_vrm C  &ctrl_combos_vrm V  &alt_combo ENTER         &kp C_MUTE                                 &kp HOME                           &none    &none           &none         &none      &none          &none
                                                          &none               &none               &none                                                                                                  &kp INS  &kp TAB         &none
             >;
 
