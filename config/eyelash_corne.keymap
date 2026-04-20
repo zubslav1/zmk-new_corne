@@ -319,7 +319,7 @@
             label = "ALT_COMBO";
         };
 
-        combo_vrm: combo_vrm {
+        combos_vrm: combos_vrm {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -331,7 +331,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "COMBO_VRM";
+            label = "COMBOS_VRM";
         };
     };
 
