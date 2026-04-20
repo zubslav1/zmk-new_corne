@@ -318,6 +318,20 @@
 
             label = "SHIFT_COMBOS_VRM";
         };
+
+        slow_down_shift: slow_down_shift {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "SLOW_DOWN_SHIFT";
+        };
     };
 
     keymap {
@@ -357,10 +371,10 @@
         numpad {
             display-name = "numpad";
             bindings = <
-&none  &none  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9   &kp F10                                      &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH    &none
-&none  &none  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6   &kp F11                      &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp AT_SIGN  &kp POUND
-&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12        &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none
-                               &kp NUMBER_0     &to_qwerty_layer  &kp BACKSPACE                                                      &trans             &kp NUMBER_0  &none
+&none  &none  &mt F7 NUMBER_7  &mt F8 NUMBER_8  &mt F9 NUMBER_9   &kp F10                                     &kp END               &kp DOUBLE_QUOTES  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH    &none
+&none  &none  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 NUMBER_6   &kp F11                     &kp LEFT_ARROW  &mkp LCLK  &kp RIGHT  &kp MINUS          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp AT_SIGN  &kp POUND
+&none  &none  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3   &kp F12       &kp C_MUTE                    &kp HOME              &kp DOT            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none
+                               &kp BACKSPACE    &to_qwerty_layer  &kp NUMBER_0                                                      &trans             &kp NUMBER_0  &none
             >;
         };
 
