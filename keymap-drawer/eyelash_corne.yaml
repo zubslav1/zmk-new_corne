@@ -200,8 +200,8 @@ layers:
   - Alt+$$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - '&alt_tab_vrm'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&add_cell_above_jupyter'
-  - '&add_cell_below_jupyter'
   - '&clear_cell_jupyter'
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
