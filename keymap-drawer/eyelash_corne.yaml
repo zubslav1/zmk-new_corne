@@ -201,7 +201,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - Alt+$$mdi:apple-keyboard-shift$$
   - {t: '1', s: '!'}
-  - '&clear_ouput_jupyter C'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&add_cell_above_jupyter'
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
