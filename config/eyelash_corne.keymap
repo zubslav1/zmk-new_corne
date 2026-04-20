@@ -304,7 +304,7 @@
             label = "SHIFT_COMBOS_VRM";
         };
 
-        combos_vrm: shift_combos_vrm {
+        combos_vrm: combos_vrm {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
