@@ -383,10 +383,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LC(DEL))  &kp LEFT_ALT     &kp LA(LEFT_SHIFT)  &alt_tab_vrm     &clear_cell_jupyter  &add_cell_above_jupyter                                          &kp END                               &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&kp LEFT_ALT     &ctrl_for_vrm A  &kp LEFT_SHIFT      &kp LCTRL        &delete_jupyter      &add_cell_below_jupyter                &ctrl_for_vrm LEFT_ARROW  &mkp LCLK  &ctrl_for_vrm RIGHT_ARROW  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LG(X)        &ctrl_for_vrm Z  &ctrl_for_vrm X     &ctrl_for_vrm C  &ctrl_for_vrm V      &shift_for_vrm ENTER     &kp C_MUTE                              &kp HOME                              &none    &none           &none         &none      &none          &none
-                                                      &none            &none                &none                                                                                                  &kp INS  &kp TAB         &none
+&kp LA(LEFT_SHIFT)    &kp LEFT_ALT     &alt_tab_vrm     &add_cell_above_jupyter  &add_cell_below_jupyter  &clear_cell_jupyter                                          &kp END                               &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
+&shift_for_vrm ENTER  &ctrl_for_vrm A  &ctrl_for_vrm X  &ctrl_for_vrm C          &ctrl_for_vrm V          &delete_jupyter                    &ctrl_for_vrm LEFT_ARROW  &mkp LCLK  &ctrl_for_vrm RIGHT_ARROW  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
+&kp LA(LC(DEL))       &ctrl_for_vrm Z  &kp LEFT_SHIFT   &kp LCTRL                &add_cell_below_jupyter  &none                &kp C_MUTE                              &kp HOME                              &none    &none           &none         &none      &none          &none
+                                                        &none                    &none                    &none                                                                                              &kp INS  &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
