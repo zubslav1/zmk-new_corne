@@ -292,8 +292,9 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &macro_param_1to1>,
-                <&macro_tap_time 250>,
+                <&kp LCTRL>,
+                <&macro_wait_time 200>,
+                <&macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
@@ -307,8 +308,9 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_SHIFT &macro_param_1to1>,
-                <&macro_tap_time 250>,
+                <&kp LEFT_SHIFT>,
+                <&macro_wait_time 200>,
+                <&macro_param_1to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
