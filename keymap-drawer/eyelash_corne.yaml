@@ -200,9 +200,9 @@ layers:
   - Alt+$$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - '&alt_tab_vrm'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&delete_jupyter'
   - '&add_cell_above_jupyter'
-  - '&clear_cell_jupyter'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
@@ -215,7 +215,7 @@ layers:
   - '&ctrl_for_vrm X'
   - '&ctrl_for_vrm C'
   - '&ctrl_for_vrm V'
-  - '&delete_jupyter'
+  - '&clear_cell_jupyter'
   - '&ctrl_for_vrm LEFT_ARROW'
   - $$mdi:mouse-left-click-outline$$
   - '&ctrl_for_vrm RIGHT_ARROW'
