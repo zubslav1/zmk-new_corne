@@ -230,7 +230,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - '&add_cell_below_jupyter'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&ctrl_for_vrm ENTER'
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
