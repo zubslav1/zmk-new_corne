@@ -212,7 +212,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&shift_for_vrm ENTER'
   - '&ctrl_for_vrm A'
-  - '&ctrl_for_vrm X'
+  - $$mdi:apple-keyboard-shift$$
   - '&ctrl_for_vrm C'
   - '&ctrl_for_vrm V'
   - '&clear_cell_jupyter'
@@ -227,7 +227,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - '&ctrl_for_vrm Z'
-  - $$mdi:apple-keyboard-shift$$
+  - '&ctrl_for_vrm X'
   - $$mdi:apple-keyboard-control$$
   - '&add_cell_below_jupyter'
   - '&ctrl_for_vrm ENTER'
