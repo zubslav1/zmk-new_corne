@@ -50,21 +50,21 @@ layers:
   - SYMBOL_en
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   SYMBOL_en:
-  - '&shift_for_vrm DOLLAR'
+  - $
   - {t: '-', s: _}
-  - '&shift_for_vrm LESS_THAN'
+  - <
   - '>'
-  - '&shift_for_vrm EXCLAMATION'
-  - '&shift_for_vrm PERCENT'
+  - '!'
+  - '%'
   - $$mdi:arrow-up-bold$$
-  - '&shift_for_vrm AMPERSAND'
+  - '&'
   - ':'
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - '&shift_for_vrm UNDERSCORE'
+  - _
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-shift$$
-  - '&shift_for_vrm PLUS'
+  - +
   - '"'
   - {t: '''', s: '"'}
   - {t: '=', s: +}
@@ -72,26 +72,26 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
-  - '&shift_for_vrm PIPE'
+  - '|'
   - {t: ., s: '>'}
-  - '&shift_for_vrm LEFT_PARENTHESIS'
-  - '&shift_for_vrm RIGHT_PARENTHESIS'
-  - '&shift_for_vrm QUESTION'
+  - (
+  - )
+  - '?'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - '&shift_for_vrm CARET'
+  - ^
   - {t: /, s: '?'}
-  - '&shift_for_vrm ASTERISK'
+  - '*'
   - {t: \, s: '|'}
-  - '&shift_for_vrm HASH'
+  - '#'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
   - {t: ',', s: <}
-  - '&shift_for_vrm LEFT_BRACE'
-  - '&shift_for_vrm RIGHT_BRACE'
-  - '&shift_for_vrm AT_SIGN'
-  - '&shift_for_vrm TILDE'
+  - '{'
+  - '}'
+  - '@'
+  - '~'
   - {t: '$$mdi:backspace$$', type: backspace}
   - symbol_rus
   - $$mdi:backspace-reverse-outline$$
@@ -103,21 +103,21 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift_for_vrm EXCLAMATION'
+  - '!'
   - '%'
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift_for_vrm NUMBER_6'
+  - '6'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&shift UNDERSCORE'
-  - {t: ']', h: '&shift RIGHT_BRACKET', s: '}'}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-shift$$
   - +
-  - '&shift_for_vrm AT_SIGN'
+  - '@'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
-  - '&shift_for_vrm DOLLAR'
+  - $
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
@@ -125,18 +125,18 @@ layers:
   - {t: /, s: '?'}
   - (
   - )
-  - '&shift_for_vrm AMPERSAND'
+  - '&'
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift_for_vrm BACKSLASH'
-  - '&shift_for_vrm ASTERISK'
-  - '&shift_for_vrm PIPE'
+  - {t: \, s: '|'}
+  - '*'
+  - '|'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift_for_vrm QUESTION'
+  - '?'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
