@@ -363,7 +363,7 @@
 
         symbol_rus {
             bindings = <
-&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp UP_ARROW               &none  &kp NUMBER_6  &none                 &none                  &shift UNDERSCORE  &kp BACKSPACE
+&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp UP_ARROW               &none  &kp CARET     &none                 &none                  &shift UNDERSCORE  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp PLUS   &kp AT_SIGN    &none         &kp EQUAL        &kp DOLLAR             &kp LEFT  &mkp LCLK       &kp RIGHT  &none  &kp SLASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND      &kp DEL
 &kp LCTRL       &none      &kp BACKSLASH  &kp ASTERISK  &kp PIPE         &none        &trans              &kp DOWN_ARROW             &none  &kp QUESTION  &none                 &none                  &none              &none
                                           &none         &none            &none                                                       &none  &none         &none
@@ -383,10 +383,10 @@
         navigation {
             display-name = "nav";
             bindings = <
-&kp LA(LEFT_SHIFT)    &kp LEFT_ALT     &alt_tab_vrm     &delete_jupyter  &add_cell_above_jupyter  &ctrl_for_vrm F                                              &kp END                               &none    &kp HOME        &kp UP_ARROW  &kp END    &kp PG_UP      &none
-&shift_for_vrm ENTER  &ctrl_for_vrm A  &kp LEFT_SHIFT   &ctrl_for_vrm C  &ctrl_for_vrm V          &clear_cell_jupyter                &ctrl_for_vrm LEFT_ARROW  &mkp LCLK  &ctrl_for_vrm RIGHT_ARROW  &none    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp PAGE_DOWN  &none
-&kp LA(LC(DEL))       &ctrl_for_vrm Z  &ctrl_for_vrm X  &kp LCTRL        &add_cell_below_jupyter  &ctrl_for_vrm ENTER  &kp C_MUTE                              &kp HOME                              &none    &none           &none         &none      &none          &none
-                                                        &none            &none                    &none                                                                                              &kp INS  &kp TAB         &none
+&kp LA(LEFT_SHIFT)    &kp LEFT_ALT     &alt_tab_vrm     &delete_jupyter  &add_cell_above_jupyter  &ctrl_for_vrm F                                              &kp END                               &kp PG_UP      &kp HOME        &kp UP_ARROW  &kp END    &kp LEFT_SHIFT  &kp BACKSPACE
+&shift_for_vrm ENTER  &ctrl_for_vrm A  &kp LEFT_SHIFT   &ctrl_for_vrm C  &ctrl_for_vrm V          &clear_cell_jupyter                &ctrl_for_vrm LEFT_ARROW  &mkp LCLK  &ctrl_for_vrm RIGHT_ARROW  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &kp LCTRL       &kp DEL
+&kp LA(LC(DEL))       &ctrl_for_vrm Z  &ctrl_for_vrm X  &kp LCTRL        &add_cell_below_jupyter  &ctrl_for_vrm ENTER  &kp C_MUTE                              &kp HOME                              &none          &none           &none         &none      &none           &none
+                                                        &none            &none                    &none                                                                                              &kp INS        &kp TAB         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
