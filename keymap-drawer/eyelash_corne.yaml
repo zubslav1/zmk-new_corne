@@ -107,7 +107,7 @@ layers:
   - '%'
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '6'
+  - ^
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&shift UNDERSCORE'
@@ -204,12 +204,12 @@ layers:
   - '&add_cell_above_jupyter'
   - '&ctrl_for_vrm F'
   - END
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PG UP
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - PG UP
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - '&shift_for_vrm ENTER'
   - '&ctrl_for_vrm A'
   - $$mdi:apple-keyboard-shift$$
@@ -219,12 +219,12 @@ layers:
   - '&ctrl_for_vrm LEFT_ARROW'
   - $$mdi:mouse-left-click-outline$$
   - '&ctrl_for_vrm RIGHT_ARROW'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgDn
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - PgDn
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:backspace-reverse-outline$$
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - '&ctrl_for_vrm Z'
   - '&ctrl_for_vrm X'
