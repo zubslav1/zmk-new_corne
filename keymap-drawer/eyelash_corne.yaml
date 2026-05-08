@@ -41,7 +41,7 @@ layers:
   - {t: M, h: '&shift M'}
   - {t: ',', h: '&shift COMMA', s: <}
   - {t: ., h: '&shift DOT', s: '>'}
-  - {t: /, h: '&shift FSLH', s: '?'}
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&to_nav_mo'
