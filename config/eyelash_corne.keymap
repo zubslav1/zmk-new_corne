@@ -56,7 +56,7 @@
             label = "CAPITAL_WORD";
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            continue-list = <UNDERSCORE>;
+            continue-list = <UNDERSCORE COMMA DOT LEFT_BRACKET RIGHT_BRACKET>;
         };
 
         capital_letter: capital_letter {
@@ -389,7 +389,7 @@
             bindings = <
 &kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                                 &kp END                         &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
 &td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G             &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                        &kp HOME                        &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &auto_shift FSLH FSLH  &kp ESCAPE
+&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                        &kp HOME                        &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &kp CAPS               &kp ESCAPE
                                              &kp BACKSPACE    &to_nav_mo       &kp SPACE                                                                       &mt LEFT_WIN ENTER  &mo 1            &none
             >;
 
