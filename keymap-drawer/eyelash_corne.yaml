@@ -234,8 +234,8 @@ layers:
   - $$mdi:volume-off$$
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+Ctl+K
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: 'Ctl+$$mdi:backspace$$', type: backspace}
+  - '&shift_ctrl_vrm K'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
