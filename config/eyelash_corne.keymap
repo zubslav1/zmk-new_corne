@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&capital_letter LEFT_SHIFT>, <&capital_word>;
         };
 
         auto_shift: auto_shift {
@@ -49,6 +49,23 @@
             label = "UNDO_REDO";
             #sensor-binding-cells = <0>;
             bindings = <&kp LS(LC(Z))>, <&kp LC(Z)>;
+        };
+
+        capital_word: capital_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPITAL_WORD";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            continue-list = <UNDERSCORE>;
+        };
+
+        capital_letter: capital_letter {
+            compatible = "zmk,behavior-sticky-key";
+            label = "CAPITAL_LETTER";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <2000>;
         };
     };
 
