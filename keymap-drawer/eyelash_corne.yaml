@@ -199,7 +199,7 @@ layers:
   nav:
   - Alt+$$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
-  - '&alt_tab_vrm'
+  - '&shift_ctrl_button'
   - '&delete_jupyter'
   - '&add_cell_above_jupyter'
   - '&ctrl_for_vrm F'
