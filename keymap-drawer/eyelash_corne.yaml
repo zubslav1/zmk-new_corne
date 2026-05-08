@@ -208,8 +208,8 @@ layers:
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:backspace$$', type: backspace}
+  - INS
   - '&shift_for_vrm ENTER'
   - '&ctrl_for_vrm A'
   - $$mdi:apple-keyboard-shift$$
@@ -223,8 +223,8 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:apple-keyboard-control$$
   - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   - '&ctrl_for_vrm Z'
   - '&ctrl_for_vrm X'
@@ -242,7 +242,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - INS
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   sys:
