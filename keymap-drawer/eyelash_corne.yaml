@@ -41,7 +41,7 @@ layers:
   - {t: M, h: '&shift M'}
   - {t: ',', h: '&shift COMMA', s: <}
   - {t: ., h: '&shift DOT', s: '>'}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&to_nav_mo'
@@ -62,7 +62,7 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - _
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-shift$$
   - +
   - '"'
@@ -111,7 +111,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&shift UNDERSCORE'
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-shift$$
   - +
   - '@'
