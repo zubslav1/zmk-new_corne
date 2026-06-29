@@ -40,7 +40,7 @@
             bindings = <&shift>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
         };
 
@@ -395,10 +395,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &auto_shift Q Q  &auto_shift W W  &auto_shift E E  &auto_shift R R  &auto_shift T T                                 &kp END                         &auto_shift Y Y     &auto_shift U U  &auto_shift I I          &auto_shift O O      &auto_shift P P        &auto_shift LEFT_BRACKET LEFT_BRACKET
-&td0       &auto_shift A A  &auto_shift S S  &auto_shift D D  &auto_shift F F  &auto_shift G G             &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &auto_shift H H     &auto_shift J J  &auto_shift K K          &auto_shift L L      &auto_shift SEMI SEMI  &auto_shift SQT SQT
-&kp LCTRL  &auto_shift Z Z  &auto_shift X X  &auto_shift C C  &auto_shift V V  &auto_shift B B  &to_sys                        &kp HOME                        &auto_shift N N     &auto_shift M M  &auto_shift COMMA COMMA  &auto_shift DOT DOT  &kp SLASH              &kp ESCAPE
-                                             &kp BACKSPACE    &to_nav_mo       &kp SPACE                                                                       &mt LEFT_WIN ENTER  &mo 1            &none
+&kp TAB    &kp Q  &kp W  &kp E          &kp R       &kp T                                     &kp END                         &kp Y               &kp U  &kp I      &kp O    &kp P      &kp LEFT_BRACKET
+&td0       &kp A  &kp S  &kp D          &kp F       &kp G                 &kp LC(LEFT_ARROW)  &mkp LCLK  &kp LC(RIGHT_ARROW)  &kp H               &kp J  &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C          &kp V       &kp B      &to_sys                        &kp HOME                        &kp N               &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp ESCAPE
+                         &kp BACKSPACE  &to_nav_mo  &kp SPACE                                                                 &mt LEFT_WIN ENTER  &mo 1  &none
             >;
 
             sensor-bindings = <&undo_redo>;
@@ -407,19 +407,19 @@
         symbol_eng {
             display-name = "SYMBOL_en";
             bindings = <
-&kp DOLLAR      &kp MINUS  &kp LESS_THAN      &kp GREATER_THAN  &kp EXCLAMATION  &kp PERCENT                              &kp UP_ARROW               &kp AMPERSAND  &kp COLON  &kp LBKT              &kp RIGHT_BRACKET      &kp UNDERSCORE  &kp CAPS
-&kp LEFT_SHIFT  &kp PLUS   &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL        &kp SEMICOLON            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &kp PIPE       &kp DOT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp DEL
-&kp LCTRL       &kp CARET  &kp SLASH          &kp ASTERISK      &kp BACKSLASH    &kp HASH       &trans                    &kp DOWN_ARROW             &kp GRAVE      &kp COMMA  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN     &kp TILDE
-                                              &kp BACKSPACE     &mo 2            &kp DELETE                                                          &none          &none      &none
+&auto_shift DOLLAR LS(NUMBER_4)  &kp MINUS                       &auto_shift LESS_THAN LS(COMMA)    &auto_shift GREATER_THAN LS(PERIOD)  &auto_shift EXCLAMATION LS(NUMBER_1)  &auto_shift PERCENT LS(N5)                               &kp UP_ARROW               &auto_shift AMPERSAND LS(N7)    &auto_shift COLON LS(SEMI)  &kp LBKT                                 &kp RIGHT_BRACKET                          &auto_shift UNDERSCORE LS(MINUS)  &kp CAPS
+&kp LEFT_SHIFT                   &auto_shift PLUS LS(EQUAL)      &auto_shift DOUBLE_QUOTES LS(SQT)  &kp SINGLE_QUOTE                     &kp EQUAL                             &kp SEMICOLON                            &kp LEFT_ARROW  &mkp LCLK       &kp RIGHT  &auto_shift PIPE LS(BACKSLASH)  &kp DOT                     &auto_shift LEFT_PARENTHESIS LS(N9)      &auto_shift RIGHT_PARENTHESIS LS(N0)       &auto_shift QUESTION LS(SLASH)    &kp DEL
+&kp LCTRL                        &auto_shift CARET LS(NUMBER_6)  &kp SLASH                          &auto_shift ASTERISK LS(N8)          &kp BACKSLASH                         &auto_shift HASH LS(NUMBER_3)  &trans                    &kp DOWN_ARROW             &kp GRAVE                       &kp COMMA                   &auto_shift LEFT_BRACE LS(LEFT_BRACKET)  &auto_shift RIGHT_BRACE LS(RIGHT_BRACKET)  &auto_shift AT_SIGN LS(NUMBER_2)  &auto_shift TILDE LS(GRAVE)
+                                                                                                    &kp BACKSPACE                        &mo 2                                 &kp DELETE                                                                          &none                           &none                       &none
             >;
         };
 
         symbol_rus {
             bindings = <
-&kp ESC         &kp MINUS  &none          &none         &kp EXCLAMATION  &kp PERCENT                      &kp UP_ARROW               &none  &kp CARET     &none                 &none                  &shift UNDERSCORE  &kp CAPSLOCK
-&kp LEFT_SHIFT  &kp PLUS   &kp AT_SIGN    &none         &kp EQUAL        &kp DOLLAR             &kp LEFT  &mkp LCLK       &kp RIGHT  &none  &kp SLASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND      &kp DEL
-&kp LCTRL       &none      &kp BACKSLASH  &kp ASTERISK  &kp PIPE         &none        &trans              &kp DOWN_ARROW             &none  &kp QUESTION  &none                 &none                  &none              &none
-                                          &none         &none            &none                                                       &none  &none         &none
+&kp ESC         &auto_shift MINUS MINUS  &none                            &none                          &auto_shift EXCLAMATION EXCLAMATION  &kp PERCENT                                    &kp UP_ARROW               &none  &auto_shift CARET CARET        &none                                          &none                                            &auto_shift UNDERSCORE UNDERSCORE  &kp CAPSLOCK
+&kp LEFT_SHIFT  &auto_shift PLUS PLUS    &auto_shift AT_SIGN AT_SIGN      &none                          &auto_shift EQUAL EQUAL              &auto_shift DOLLAR DOLLAR            &kp LEFT  &mkp LCLK       &kp RIGHT  &none  &auto_shift SLASH SLASH        &auto_shift LEFT_PARENTHESIS LEFT_PARENTHESIS  &auto_shift RIGHT_PARENTHESIS RIGHT_PARENTHESIS  &auto_shift AMPERSAND AMPERSAND    &kp DEL
+&kp LCTRL       &none                    &auto_shift BACKSLASH BACKSLASH  &auto_shift ASTERISK ASTERISK  &auto_shift PIPE PIPE                &none                      &trans              &kp DOWN_ARROW             &none  &auto_shift QUESTION QUESTION  &none                                          &none                                            &none                              &none
+                                                                          &none                          &none                                &none                                                                     &none  &none                          &none
             >;
         };
 
