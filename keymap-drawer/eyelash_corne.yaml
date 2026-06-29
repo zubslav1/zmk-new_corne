@@ -2,45 +2,45 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
-  - {t: Q, h: '&shift Q'}
-  - {t: W, h: '&shift W'}
-  - {t: E, h: '&shift E'}
-  - {t: R, h: '&shift R'}
-  - {t: T, h: '&shift T'}
+  - Q
+  - W
+  - E
+  - R
+  - T
   - END
-  - {t: Y, h: '&shift Y'}
-  - {t: U, h: '&shift U'}
-  - {t: I, h: '&shift I'}
-  - {t: O, h: '&shift O'}
-  - {t: P, h: '&shift P'}
-  - {t: '[', h: '&shift LEFT_BRACKET', s: '{'}
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '[', s: '{'}
   - '&td0'
-  - {t: A, h: '&shift A'}
-  - {t: S, h: '&shift S'}
-  - {t: D, h: '&shift D'}
-  - {t: F, h: '&shift F'}
-  - {t: G, h: '&shift G'}
+  - A
+  - S
+  - D
+  - F
+  - G
   - Ctl+$$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - {t: H, h: '&shift H'}
-  - {t: J, h: '&shift J'}
-  - {t: K, h: '&shift K'}
-  - {t: L, h: '&shift L'}
-  - {t: ;, h: '&shift SEMI', s: ':'}
-  - {t: '''', h: '&shift SQT', s: '"'}
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - {t: Z, h: '&shift Z'}
-  - {t: X, h: '&shift X'}
-  - {t: C, h: '&shift C'}
-  - {t: V, h: '&shift V'}
-  - {t: B, h: '&shift B'}
+  - Z
+  - X
+  - C
+  - V
+  - B
   - '&to_sys'
   - HOME
-  - {t: N, h: '&shift N'}
-  - {t: M, h: '&shift M'}
-  - {t: ',', h: '&shift COMMA', s: <}
-  - {t: ., h: '&shift DOT', s: '>'}
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -50,48 +50,48 @@ layers:
   - SYMBOL_en
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   SYMBOL_en:
-  - $
+  - {t: Sft+4, h: '&shift DOLLAR'}
   - {t: '-', s: _}
-  - <
-  - '>'
-  - '!'
-  - '%'
+  - {t: 'Sft+,', h: '&shift LESS_THAN', s: Sft+<}
+  - {t: Sft+., h: '&shift GREATER_THAN'}
+  - {t: Sft+1, h: '&shift EXCLAMATION'}
+  - {t: Sft+5, h: '&shift PERCENT', s: Sft+%}
   - $$mdi:arrow-up-bold$$
-  - '&'
-  - ':'
+  - {t: Sft+7, h: '&shift AMPERSAND', s: Sft+&}
+  - {t: Sft+;, h: '&shift COLON', s: 'Sft+:'}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - _
+  - {t: Sft+-, h: '&shift UNDERSCORE', s: Sft+_}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-shift$$
-  - +
-  - '"'
+  - {t: Sft+=, h: '&shift PLUS', s: Sft++}
+  - {t: Sft+', h: '&shift DOUBLE_QUOTES', s: Sft+"}
   - {t: '''', s: '"'}
   - {t: '=', s: +}
   - {t: ;, s: ':'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
-  - '|'
+  - {t: Sft+\, h: '&shift PIPE', s: Sft+|}
   - {t: ., s: '>'}
-  - (
-  - )
-  - '?'
+  - {t: Sft+9, h: '&shift LEFT_PARENTHESIS', s: Sft+(}
+  - {t: Sft+0, h: '&shift RIGHT_PARENTHESIS', s: Sft+)}
+  - {t: Sft+/, h: '&shift QUESTION', s: 'Sft+?'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
-  - ^
+  - {t: Sft+6, h: '&shift CARET'}
   - {t: /, s: '?'}
-  - '*'
+  - {t: Sft+8, h: '&shift ASTERISK', s: Sft+*}
   - {t: \, s: '|'}
-  - '#'
+  - {t: Sft+3, h: '&shift HASH'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '`', s: '~'}
   - {t: ',', s: <}
-  - '{'
-  - '}'
-  - '@'
-  - '~'
+  - {t: 'Sft+[', h: '&shift LEFT_BRACE', s: 'Sft+{'}
+  - {t: 'Sft+]', h: '&shift RIGHT_BRACE', s: 'Sft+}'}
+  - {t: Sft+2, h: '&shift AT_SIGN'}
+  - {t: Sft+`, h: '&shift TILDE', s: Sft+~}
   - {t: '$$mdi:backspace$$', type: backspace}
   - symbol_rus
   - $$mdi:backspace-reverse-outline$$
@@ -100,43 +100,43 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   symbol_rus:
   - $$mdi:keyboard-esc$$
-  - {t: '-', s: _}
+  - {t: '-', h: '&shift MINUS', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '!'
+  - {t: '!', h: '&shift EXCLAMATION'}
   - '%'
   - $$mdi:arrow-up-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ^
+  - {t: ^, h: '&shift CARET'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&shift UNDERSCORE'
+  - {t: _, h: '&shift UNDERSCORE'}
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:apple-keyboard-shift$$
-  - +
-  - '@'
+  - {t: +, h: '&shift PLUS'}
+  - {t: '@', h: '&shift AT_SIGN'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '=', s: +}
-  - $
+  - {t: '=', h: '&shift EQUAL', s: +}
+  - {t: $, h: '&shift DOLLAR'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: /, s: '?'}
-  - (
-  - )
-  - '&'
+  - {t: /, h: '&shift SLASH', s: '?'}
+  - {t: (, h: '&shift LEFT_PARENTHESIS'}
+  - {t: ), h: '&shift RIGHT_PARENTHESIS'}
+  - {t: '&', h: '&shift AMPERSAND'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: \, s: '|'}
-  - '*'
-  - '|'
+  - {t: \, h: '&shift BACKSLASH', s: '|'}
+  - {t: '*', h: '&shift ASTERISK'}
+  - {t: '|', h: '&shift PIPE'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-down-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '?'
+  - {t: '?', h: '&shift QUESTION'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
